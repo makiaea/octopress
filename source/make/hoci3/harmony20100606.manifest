@@ -1,0 +1,21 @@
+CACHE MANIFEST
+index.html
+
+js/about.js
+js/colorselector.js
+js/colorutils.js
+js/main.js
+js/menu.js
+js/palette.js
+
+js/brushes/chrome.js
+js/brushes/circles.js
+js/brushes/fur.js
+js/brushes/grid.js
+js/brushes/longfur.js
+js/brushes/ribbon.js
+js/brushes/shaded.js
+js/brushes/simple.js
+js/brushes/sketchy.js
+js/brushes/squares.js
+js/brushes/web.js
