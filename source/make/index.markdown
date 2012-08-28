@@ -7,7 +7,7 @@ sharing: true
 footer: true
 ---
 
-**[makiaeafont ttf][]** download. a basic font using fontforge — originally for ambidextrous pen–and–ink 1995; released under [creative commons by-nc-sa licence 3.0][cc]. contains A–Z, a–z, 0–9 and some punctuation. auto–generated accents available, not optimised. designed to work without kerning pairs or ligatures.
+**[makiaeafont ttf][]** a basic font using fontforge — originally for ambidextrous pen–and–ink 1995; released under [creative commons by-nc-sa licence 3.0][cc]. contains A–Z, a–z, 0–9 and some punctuation. auto–generated accents available, not optimised. designed to work without kerning pairs or ligatures.
 
 [makiaeafont ttf]: http://dl.dropbox.com/u/2891399/Anki/makiaeakanjicantonese.media/makiaea2.ttf
 [cc]: http://creativecommons.org/licenses/by-nc-sa/3.0/
