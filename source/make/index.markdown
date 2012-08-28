@@ -7,8 +7,13 @@ sharing: true
 footer: true
 ---
 
-[harmony with offline cache][hoci] a fun, ephemeral drawing tool created by [mrdoob][]. modified to work offline without internet connection using html5 offline caching, and a few other tweaks. code available on [github][hoci code] under MIT licence.
+**[makiaeafont ttf][]** download. a basic font using fontforge — originally for ambidextrous pen–and–ink 1995; released under [creative commons by-nc-sa licence 3.0][cc]. contains A–Z, a–z, 0–9 and some punctuation. auto–generated accents available, not optimised. designed to work without kerning pairs or ligatures.
 
-[hoci]: http://makiaea.github.com/make/hoci.html
+[makiaeafont ttf]: http://dl.dropbox.com/u/2891399/Anki/makiaeakanjicantonese.media/makiaea2.ttf
+[cc]: http://creativecommons.org/licenses/by-nc-sa/3.0/
+
+**[harmony with offline cache][hoci]** a fun, ephemeral drawing tool created by [mrdoob][]. modified to work offline without internet connection using html5 offline caching, and a few other tweaks. code available on [github][hoci code] under MIT licence.
+
+[hoci]: hoci.html
 [mrdoob]: http://mrdoob.com/projects/harmony/
 [hoci code]: https://github.com/makiaea/harmony

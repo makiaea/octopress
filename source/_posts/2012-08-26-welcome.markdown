@@ -1,0 +1,8 @@
+---
+layout: post
+title: "welcome"
+date: 2012-08-26 08:37
+comments: true
+categories: 
+---
+Hi! Just moved here from Tumblr, now super–condensing old posts into pages. Please explore!
