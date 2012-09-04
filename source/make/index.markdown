@@ -6,6 +6,11 @@ comments: true
 sharing: true
 footer: true
 ---
+**[makiaeakanjicantonese anki deck][]** kanji and cantonese learning flashcards for use with [anki][]; kanji list originally based on JLPT level 1 (2135 kanji); most cantonese definitions manually entered, originally from [cantodict][]. can be used in conjunction with [makiaeafont ttf][]
+
+[makiaeakanjicantonese anki deck]: https://www.dropbox.com/s/bulrv9hs5todkwa/20120905makiaeakanjicantonese.anki
+[anki]: http://ankisrs.net
+[cantodict]: http://www.cantonese.sheik.co.uk/dictionary
 
 **[makiaeafont ttf][]** a basic font using fontforge — originally for ambidextrous pen–and–ink 1995; released under [creative commons by-nc-sa licence 3.0][cc]. contains A–Z, a–z, 0–9 and some punctuation. auto–generated accents available, not optimised. designed to work without kerning pairs or ligatures.
 
