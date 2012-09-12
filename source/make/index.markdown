@@ -7,9 +7,10 @@ sharing: true
 footer: true
 ---
 
-**[makiaeakanjicantonese anki deck][]** kanji and cantonese learning flashcards for use with [anki][]; kanji list originally based on JLPT level 1 (2135 kanji); most cantonese definitions manually entered, originally from [cantodict][]. can be used in conjunction with [makiaeafont ttf][]
+**[makiaeakanjicantonese anki deck][]** kanji and cantonese learning flashcards for use with [anki][] based on JLPT level 1 (2135 kanji). cantonese definitions manually entered, originally from [cantodict][]. can be used in conjunction with [makiaeafont ttf][]. also available as a [packaged anki deck][]
 
 [makiaeakanjicantonese anki deck]: https://www.dropbox.com/s/bulrv9hs5todkwa/20120905makiaeakanjicantonese.anki
+[packaged anki deck]: https://www.dropbox.com/s/3jndfzcsv9t2467/20120905makiaeakanjicantonese-shared-1346782570.zip
 [anki]: http://ankisrs.net
 [cantodict]: http://www.cantonese.sheik.co.uk/dictionary
 
