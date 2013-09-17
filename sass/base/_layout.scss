@@ -17,6 +17,11 @@ body{
 		font-size: 13px;
 	}
 }
+/* 20130828 begin table modifications*/
+th {display:none;}
+td {padding:0em 0.3em 0em 0.3em;vertical-align: top;background-color:#ffffff;}
+table {border:0!important}
+
 h1{
 	font-size: 1.8em;
 }

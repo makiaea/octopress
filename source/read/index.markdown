@@ -6,6 +6,9 @@ comments: true
 sharing: true
 footer: false
 ---
+**[techrecommendations][]** some favourite apps and workflows for macosx and ios 2013
+
+[techrecommendations]: http://makiaea.org/read/techrecommendations.html
 
 **[love and trust and somesuch spells][somesuch]** *for empaths* an original, thought–provoking and inclusive book about living responsibly. practical and sensible methods to deal with challenging situations. isbn 978-1-84874-000-6 latest [epub][somesuchepub] 2010
 
@@ -36,8 +39,3 @@ footer: false
 
 [greek philosophy]: http://makiaea.org/read/greekphilosophy.html
 [greekphilosophy]: http://dl.dropbox.com/u/2891399/press/burnet/greekphilosophy/greekphilosophy.epub
-
-
-
-
-
