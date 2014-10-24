@@ -21,4 +21,4 @@ for a version that works well on iphone3, please see [hoci3][].
 [hoci4 shaded]: http://makiaea.github.com/make/hoci4/index.html#shaded
 [hoci code]: https://github.com/makiaea/harmony
 [mrdoob]: http://mrdoob.com/projects/harmony/
-[hoci3]: http://www.makiaea.org/tagged/cookbook
+[hoci3]: http://makiaea.github.com/make/hoci3/index.html

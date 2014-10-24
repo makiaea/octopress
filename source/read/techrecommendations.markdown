@@ -1,306 +1,230 @@
 ---
 layout: page
-title: "macosx and ios recommendations"
+title: "mac and ios"
 date: 2013-08-21 16:12
 comments: true
 sharing: true
 footer: true
+
 ---
 
-* <a href="#macosxbasic">macosx basic</a>
-* <a href="#macosxintermediate">macosx intermediate</a>
-* <a href="#macosxadvanced">macosx advanced</a>
-* <a href="#iosbasic">ios basic</a>
-* <a href="#iosintermediate">ios intermediate</a>
-* <a href="#iosadvanced">ios advanced</a>
+map of topics: [pdf][map-pdf],[ithoughts][map-ithoughts],[markdown][map-markdown]
 
-<div id="macosxbasic"></div>
+[map-ithoughts]: https://www.dropbox.com/s/7ndlfwv4y4280h4/20140526techrecommendations.itmz
+[map-pdf]: https://www.dropbox.com/s/sseg1lvb64ghrax/20140526techrecommendations.pdf
+[map-markdown]: https://www.dropbox.com/s/i3c5p9x3bd0hgtf/20140526techrecommendations.markdown
+[map-opml]: https://www.dropbox.com/s/pwwkdeazykzov5t/20140526techrecommendations.opml
 
-#macosx basic
+* <a href="#capture">capturing data</a>
+* <a href="#do">action data</a>
+* <a href="#show">show data</a>
+* <a href="#learn">learning</a>
+* <a href="#shortcuts">shortcuts</a>
 
-##basic keyboard shortcuts
+<div id="capture"></div>
 
- |
----: | :---
-cmd-a | select all
-cmd-c | copy
-cmd-v | paste
-cmd-tab | shift between current and last used application
-cmd-w | close current window
-cmd-q | close current application
-alt-right | move one word right
-alt-left | move one word left
+## new ideas as text
 
-I like using a dvorak–layout keyboard as I touch–type; this can be set in system preferences — keyboard
+<div id="drafts"></div>
 
-##[alfred][]
+##### drafts
+[drafts][] £1.99ios jot down ideas, process them later. Can use custom dropbox actions to append text to specific files in dropbox. You can search within your text in drafts, which byword for ios can only do outside the file in a dropbox folder.
 
-alfred preferences — alfred hotkey: cmd+space  
-[alfred faves workflow][] creates lists of favourite folders and files  
-[alfred last changed files workflow][] hans' rename file workflow is also nice  
-[wifi toggle][] turns wifi on/off  
-[alfred create new file workflow][] Create a file in the frontmost Finder window. Enter touch followed by a filename to create a file. You can hold down “Command” while pressing “Return” to open the file after it’s created. This workflow also uses Alfred’s new feedback system: by selecting the options in the results list, you can store commonly-created filenames for faster access or store paths where you often create files, which can then be accessed by entering touch, a filename, and the keyword at. Hold down “Control” while pressing “Return” to forget saved paths and filenames  
-[alfred show hidden files workflow][] Show and hide hidden files in Finder  
-[alfred copy path workflow][] copies the path of the selected file in Finde
+here's a drafts x-callback-url I call from launchcenter pro for sending fleksy text straight to a specified dropbox file, then return to fleksy: (first copy and clear all written in fleksy using two–finger swipe up)
 
-[alfred]: http://www.alfredapp.com
-[alfred faves workflow]: http://dferg.us/favorite-folders-workflow
-[alfred last changed files workflow]: http://www.alfredforum.com/topic/1715-find-files-recently-changed-similar-to-trickster-functionality/
-[alfred create new file workflow]: http://alfred.daniel.sh
-[wifi toggle]: https://github.com/aiyodk/Alfred-Extensions/tree/master/AlfredApp_2.x/Wi-Fi-Toggle
-[alfred show hidden files workflow]: https://www.dropbox.com/s/xj2ayvsmzyd1ln3/Magician.alfredworkflow
-[alfred copy path workflow]: http://lucatnt.com/2013/04/some-useful-alfred-2-workflows/
+	drafts://x-callback-url/create?text=[clipboard]&action=todropboxmakiaea&afterSuccess=Delete&x-success={{fleksy://}}
 
+and the drafts action todropboxmakiaea itself contains:
 
-##storing data
-All non–security–sensitive important data saves to a single folder that is shared with dropbox. this provides an offsite copy and enables reliable syncing between phone and computer.
+* path: /datafiles/
+* file predefined: fromdrafts
+* ext: md
+* write: append
+* template: [[draft]]
 
-To get the most of this, when I display this special folder in Finder, I sort by reverse modified date (so that most recently modified files/folders) appear at the top. Each file is prepended with the date of creation (or another more relevant date) in the form YYYYMMDDexampleprefix.andsuffix this makes finding today's files especially easy (or any other files for which you know the creation date) via Alfred (open alfred, choose file search, enter today's date — the key sequence for me is "caps lock", "space", ";dd"). I use Keyboard Maestro (see later) to set the date via the ";dd" shortcut to produce YYYYMMDD, you can use many simpler or more complex methods to do the same.
+[drafts]: http://agiletortoise.com/drafts
+[x-callback-url]: http://agiletortoise.com/developers/drafts/
 
-##[dropbox][]
-(free) great service. I use it to backup and share a single folder of (mainly) text files
+## mindmap
 
-[dropbox]: https://www.dropbox.com/tour
+<div id="ithoughts"></div>
 
-##[f.lux][]
-(free) alters the colours on the screen to make it look nicer during nighttime (when you need colour–accuracy, you can switch it off)
+##### ithoughts
 
-[f.lux]: http://justgetflux.com
+[ithoughts][] £6.99ios/£39.99mac(ithoughtsx) mindmaps; can import/export markdown; has full–screen mode and responsive hide/show branches for presentations. more versatile than mindnod, for example has intra–document search like editorial does. does not have a free web–hosted map display service, but if you are using dropbox you can host the files yourself. ithoughts url scheme example action and list (e.g. for use in launchcenterpro):
 
-##[vlc][]
-(free) plays a lot of different video formats and can handle subtitles
+	ithoughts://Maps/makiaea/20131210maki
 
-[vlc]: https://videolan.org/vlc/
+	ithoughts://[[list:ithoughts action set|maki=Maps/makiaea/20131210maki|tech=Maps/makiaea/20140526techrecommendations]]
 
-<div id="macosxintermediate"></div>
+[ithoughts]: http://toketaware.com
 
-#macosx intermediate
+<div id="mindnode"></div>
 
-##intermediate keyboard shortcuts
+##### mindnode
 
- |
----: | :---
-ctrl-a | beginning of line (or fn-left for home)
-ctrl-e | end of line (or fn-right for end)
-ctrl-d | forward delete
-ctrl-k | kill to end of line
-ctrl-y | yank the killed text back (separate from copy paste clipboard)
-ctrl-o | paragraph break but keep cursor is same place
-ctrl-t | transpose letters
-opt-delete | delete previous word
-ctrl-b | move back one
-ctrl-f | move forward one
-ctrl-n | move next line
-ctrl-p | move previous line
-cmd-` | to shift to between the current and next windows within the same application
-<span style="white-space:nowrap;">ctrl-cmd-shift-4</span> | select screen area to capture to image in clipboard (handy for pasting screenshots in an email)
-ctrl-shift-power | (on macbook air) lock screen, if require password immediately is set for after sleep or screen saver begins
-F1-F12 | in system preferences, keyboard; use all F1, F2, etc. keys as standard function keys (press the Fn key to use the special features printed on each key)
-tab | in system preferences, keyboard shortcuts; enable full keyboard access (tab can move keyboard focus in all controls)
+[mindnode][] £6.99ios/£13.99mac(mindnodepro) mindmaps; currently cannot import markdown (if you need this now, try ithoughts, or if you use the mac app, you can paste in markdown using brett's [Converting Markdown to a mind map][] service. has free proprietary web–hosted map display service. note that syncing needs to be confirmed each time (icloud or dropbox). [mindnode url scheme][mindnodeurlscheme]; mindnode action set example [using folders][mindnodeurlschemefolder]:
 
-##[keyboardmaestro][]
-£24.45 but super useful for automating repetitive tasks. I also use it for text replacement (instead of using the MacOSX built–in text replacement, or textexpander) — it can do date formatting, which I often use in filenames. If you have an application that does not have working keyboard shortcuts for the functions you want, you can create them yourself using keyboardmaestro. (e.g. [excel paste value][]) I also like that I can disable and enable macros at will, so it is possible to enable only the set that I want active currently rather than all the macros I ever use. I often use Alfred to launch keyboardmaestro macros via applescript.
+	mindnode://[[list:mindnode action set|read=open?folder=makiaea&name=20140123read|tech=open?folder=makiaea&name=20131204techrecommendations|day=open?folder=makiaea&name=20131207daychallenges]]
 
-A useful advantage of using keyboardmaestro for macro creation is that you can specify precisely which apps you must be in to run a particular macro; this is especially good for reusing the same hotkey for slightly different functions in different apps.
+(the double square brackets mean the content is not auto–encoded)
 
-I would recommend *not* using keyboard maestro's image recognition because it can be processor intensive (my macbook air 2010 became very hot) this may be because very rarely it fails to recognise an image and keeps searching "forever".
+[mindnode]: http://mindnode.com
+[mindnodeurlscheme]: http://mindnode.com/blog/post.php?s=2012-08-10-custom-url-schemes-in-mindnode-touch
+[mindnodeurlschemefolder]: https://gist.github.com/aquarius/5823110
+ [Converting Markdown to a mind map]: http://brettterpstra.com/2013/08/18/markdown-to-mind-map/
 
-Use the preferences: sync macros option to save the preferences file to dropbox so you can use the same settings across different computers.
+## full–res continuous camera
 
-[keyboardmaestro]: http://www.keyboardmaestro.com
-[excel paste value]: https://www.dropbox.com/s/9awnbcaaszrl0ql/20130405excelpastespecial.kmmacros
+<div id="snappycam"></div>
 
-##[bettertouchtool][]
-(free) versatile tool, I use it simply for shortcuts to resize and move windows across two screens, selecting a key and mouse combination that can be used with one hand. have hidden the menubar icon, so to access the preferences, start the app
+##### snappycam
 
- |
----: | :---
-cmd threefingerswipeup | maximise window
-cmd threefingerswipedown | move window to next monitor
-cmd threefingerswipeleft | maximise window left
-cmd threefingerswiperight | maximise window right
-cmd threefingerclickswipeup | maximise window tophalf
-<span style="white-space:nowrap;">cmd threefingerclickswipedown</span> | maximise window bottomhalf
-**safari–specific** |
-threefingerswipeleft | switch to next tab (ctrl–tab)
-threefingerswiperight | switch to previous tab (ctrl–shift–tab)
+[snappycam][] £0.69ios burst photos in full iphone resolution, up to 20 frames per second on iphone5. Helpful for capturing baby photos!
 
-[bettertouchtool]: http://www.boastr.de
+[snappycam]: http://www.snappycam.com
 
-##[shortcat][]
-(free, may not be free in future) allows you to select elements on screen via accessibility functions to create keyboard shortcuts for onscreen UI elements (only works with programs that have accessibility functions enabled). Very useful you want to write keyboardmaestro macros making use of this ability (I find this more reliable and less processor intensive than using keyboardmaestro's inbulit image recogintion, where it can be used). *default shortcut access using shift-cmd-space*
+## font
 
-I use this often in keyboardmaestro macros to open up the 1password popup in safari
+<div id="fontforge"></div>
 
-[shortcat]: http://shortcatapp.com
+##### fontforge
 
-##[anki][]
-(free for desktop, expensive for mobile) i use the mobile version mainly, but if I didn't have pythonista programs for text editing on the iphone I would have to rely instead on the desktop version for data entry/editing
+[fontforge][] free–mac create your own font. Warning; this is time–consuming! mac binary made by Pedro Amado
 
-[anki]: http://ankisrs.net
+[fontforge]: http://www.typeforge.net/blog/2011/05/23/fontforge-binaries/
 
-##[marked][]
-£2.49 most people use this to preview their markdown, I sometimes use this as an alternative window into the document I am editing.
+## audio
 
-fletcher's guide to [multimarkdown syntax][multimarkdown syntax guide]  
-michel's guide to php-markdown/multimarkdown [table syntax][]
+<div id="audacity"></div>
 
-[table syntax]: http://michelf.ca/projects/php-markdown/extra/#table
-[marked]: http://markedapp.com
-[multimarkdown syntax guide]: https://github.com/fletcher/MultiMarkdown/wiki/MultiMarkdown-Syntax-Guide
+##### audacity 
 
-##[multimarkdown composer][]
-£7.99 if sublime text is too complex (yes it reminds me of emacs); my other favourite simple text editor as I keep notes in large files and use markdown a lot; I use a customised solarized dark theme, and I like how the smart pairs function works and that links are clickable in editing mode
+[audacity][] free–mac open–source audio recorder
 
-[multimarkdown composer]: http://multimarkdown.com
+[audacity]: http://audacity.sourceforge.net
 
-##[1password][]
-$49.99 in–built automation limited to browser passwords, but you can use keyboardmaestro to help with other password systems (e.g. vpn). expensive but the saved time is worth it.
+## image processing
 
-[1password]: https://agilebits.com/onepassword
+<div id="gimp"></div>
 
-##[fantastical][]
-£13.99 I don't start this at login because I don't like the icon cluttering my menubar — there is no option to disable it, even via broomstick though if you pay for bartender, it will hide it for you)
+##### bitmap
 
-[fantastical]: http://flexibits.com/fantastical
-
-##[parallels desktop][]
-£29.95 [parallels education store price][] if you have to use a virtual machine for work like I do, this is worth the investment (in my case I have to use the Windows version of MS Access!)
-
-[parallels desktop]: http://www.parallels.com/products/desktop/
-[parallels education store price]: http://store.apple.com/uk-edu/product/H9892ZM/B/parallels-desktop-8-for-mac-education-edition
-
-##[inkscape][]
-(free) SVG vector graphics editor; .svg vector graphics files can be edited and rescaled without loss of fidelity
-
-[inkscape]: http://inkscape.org
-
-##[handbrake][]
-(free) convert dvds to movie files
-
-[handbrake]: http://handbrake.fr
-
-##[gimp][]
-(free) bitmap graphics editor
+[gimp][] free–mac bitmap graphics editor
 
 [gimp]: http://www.gimp.org
 
-##[filezilla][]
-(free) file transfer client that works with secure FTP (sFTP)
+<div id="inkscape"></div>
 
-[filezilla]: https://download.filezilla-project.org
+##### vector
 
-##[clear][]
-£4.99 mainly use to drag tasks between lists (multiple window support) and rearranging lists; otherwise use iphone version instead
+[inkscape][] free–mac SVG vector graphics editor; .svg vector graphics files can be edited and rescaled without loss of fidelity
 
-[clear]: http://www.realmacsoftware.com/clear/
+[inkscape]: http://inkscape.org
 
-##[due][]
-£6.99 use iphone app mainly
+## OCR scanning offline
 
-[due]: http://www.dueapp.com
+<div id="prizmo"></div>
 
-##[byword][]
-£6.99 I now use sublime text instead, but that's much more expensive. Byword has a useful focus mode (shortcut cmd-enter) hides/dims everything except your chosen text (line, paragraph)
+##### prizmo
 
-[byword]: http://bywordapp.com
+[prizmo][] £2.99ios optical character recognition in scans does not require network connection, unlike some other scanning apps
 
-##[nvalt][]
-(free) I don't use this much anymore, as I prefer to consolidate my notes into larger files organised by subject
+[prizmo]: http://www.creaceed.com/iprizmo/about
 
-nvaltforgtd is a nice way to use nvalt for gtd, tagging http://mcdaniel.blogs.rice.edu/?p=153
-nv tips http://bitfieldconsulting.com/notational-velocity
+## keyboard
 
-[nvalt]: http://brettterpstra.com/projects/nvalt/
+<div id="fleksy"></div>
 
-##[midisheetmusic][]
-(free) am very impressed with the free midi sheet music program. download a midi file and play it with just the computer while displaying sheet music. if you want to play the midi through to the piano, then can download the free version of synthesia and it will do it for you.
+##### type without looking
 
-[midisheetmusic]: http://sourceforge.net/projects/midisheetmusic/?source=dlp
+[fleksy][] free–ios literally can type without looking at the screen. You must then move the text into another program for editing. (I especially like the invisible silent keyboard mode). Only has a qwerty keyboard, sadly no dvorak option yet. Launch Center Pro action list to use fleksy as input and send to Clear.
 
-<div id="macosxadvanced"></div>
+	launch://x-callback-url/clipboard/convert?format=plaintext&x-success=clearapp%3a%2f%2f[list:clear action set|lena=task/create?listName=lena&taskName=|now=task/create?listName=now&taskName=|write=task/create?listName=write&taskName=]{{[prompt-fleksy:Task]}}
 
-#macosx advanced
+[fleksy]: http://fleksy.com
 
-##advanced keyboard rebinding
+<div id="command-c"></div>
 
- | 
----: | :--- | :---
-caps lock | tap | access alfred
-caps lock | hold | shift–ctrl–alt–cmd
-right shift | tap | access alfred snippets
-right shift | hold | normal shift
+##### copy text between ios and mac
 
-I don't want to remember a lot of shortcut keys; alfred allows me to use shortcuts in a slightly different way, by typing a few letters (e.g. for screen saver, activate alfred, type scr) I make this more practical by binding tapping the caps lock key to activate alfred, via a combination of system preferences, pckeyboardhack and keyremap4macbook. I also rebind holding down the caps lock key to represent shift–ctrl–alt–cmd and also tapping the right shift key to the alfred snippets/clipboard history as I use this function a lot as well (it's surprising how useful multiple copy/paste can be once you are used to it)
+[command-c][] £2.49ios/freemac copy text between ios devices and macs when on same wifi network; [eric's review][ericommandcreview], [frederico's review][fredericocommandcreview]
 
-* **system preferences** keyboard — modifier keys — caps lock key: no action
-* **[pckeyboardhack][]** (free) setting — caps lock — change caps lock to 80 (F19)  — future options would be cmd_r or opt_r to F18 etc . NB remember to change caps lock configuration in system to "no action" as per http://pqrs.org/macosx/keyremap4macbook/pckeyboardhack-usage.html.en
-* **[keyremap4macbook][]** (free) goto tab misc&uninstall, select open private.xml, paste the following code (based on [brett][] and [pqrs][]); if you already have other modifications there, just paste the "items"
+[command-c]: http://www.danilo.to/command-c
+[ericommandcreview]: http://www.geekswithjuniors.com/note/how-command-c-replaces-pastebot-and-improves-my-workflow.html
+[fredericocommandcreview]: http://www.macstories.net/reviews/command-c-a-local-clipboard-sharing-tool-for-os-x-and-ios-7/
 
-here's the code
+<div id="1keyboard"></div>
 
-	<?xml version="1.0"?>
-	<root>
-		<item>
-			<name>F19 to F19</name>
-			<appendix>(F19 hold to Hyper (ctrl+shift+cmd+opt) + F19 Only, send cmd+space)</appendix>
-			<identifier>private.f192f19_cmdspace</identifier>
-			<autogen>
-				--KeyOverlaidModifier--
-				KeyCode::F19,
-				KeyCode::COMMAND_L,
-				ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
-				KeyCode::F19,
-			</autogen>
-		</item>
-			<item>
-			<name>Shift_R to Shift_R</name>
-			<appendix>(Shift_R hold to Shift_R + Shift_R Only, send F18)</appendix>
-			<identifier>private.shiftr2shiftr_f18</identifier>
-			<autogen>
-				--KeyOverlaidModifier--
-				KeyCode::SHIFT_R,
-				KeyCode::SHIFT_R,
-				KeyCode::F18,
-			</autogen>
-		</item>
-	</root>
+##### mac keyboard as (limited) input to ios
 
-* go back to change key tab, select reload xml; the two options above should now appear at the top of the menu
-* enable both options
-* restart the computer to finish enabling the keys (you'll want to be able to bring alfred up e.g. with cmd-space later)
-* set alfred to activate on F19, alfred features/clipboard/viewer hotkey to F18
-* can use same method to allocate "keytap only" to fn, leftshift, leftctrl, leftalt, leftcmd, rightcmd, rightalt or most other keys
+[1keyboard][] £6.99 if you need to use your mac keyboard to type on your ios device (via bluetooth), e.g. for messaging on ios–only apps.
 
-**[keyboardcleantool][]** (free) lovely tool temporarily disables the keyboard for when a cat wants to sit on your laptop or a baby wants to play with the keyboard
+[1keyboard]: http://www.eyalw.com/1keyboard
 
-[pckeyboardhack]: http://pqrs.org/macosx/keyremap4macbook/pckeyboardhack.html.en
-[keyremap4macbook]: http://pqrs.org/macosx/keyremap4macbook
-[keyboardcleantool]: http://blog.boastr.net/?p=2452
-[brett]: http://brettterpstra.com/2012/12/08/a-useful-caps-lock-key/
-[pqrs]: https://pqrs.org/macosx/keyremap4macbook/document.html
+<div id="do"></div>
 
-**[internal screen rotation][]** hold down command and option keys while selecting display preferences in system preferences; note you'll have to close system prefs first. (made a [keyboardmaestro macro][screenrotate] for this)
+<div id="markdown"></div>
 
-[internal screen rotation]: http://osxdaily.com/2010/12/28/rotate-mac-screen-orientation
-[screenrotate]: https://www.dropbox.com/s/ky1fu275p4cdmxr/screenrotation.kmmacros
+# write
+use markdown/multimarkdown: keep your base text in markdown format for flexibilty in using and editing it on a computer or a phone/tablet. brett's 2–minute [why markdown?][] and [ios text editors][]
 
-**[pmset][]** slow waking from sleep because of battery saving settings (warning: while doing this will make it quicker for the machine to return from standby, it will drain more battery more quickly). default is 3600 (1 hour)
+[ios text editors]: http://brettterpstra.com/ios-text-editors/
 
-* check current settings: pmset -g
-* change to 24hours by: sudo pmset -a standbydelay 86400
-* change to 2hours by: sudo pmset -a standbydelay 7200
+## text or markdown
 
-[pmset]: http://www.ewal.net/2012/09/09/slow-wake-for-macbook-pro-retina/
+<div id="editorial"></div>
 
-##[sublime text][]
-$70 (no educational discount) expensive but powerful (and speedy) editor. the distraction–free mode and solarized(dark) theme are nice too. I also like the smart pairs function. Emacs may be a better long–term investment but sublime text is easier for a newcomer to use.
+##### editorial
+
+[editorial][] £4.99ios; excellent markdown and text editor with workflows, document search, move to header. the workflows are particularly useful; it's almost a mini keyboardmaestro on ios. am currently using editorial to create a wiki–style document page for my most frequently used documents. [editorialdocs][]
+
+##### editorial workflows
+[workflows][] modify them to suit your needs
+
+[bookmarks][] save and read from a specific dropbox file in a directory, also saving the exact position of the cursor within the document   
+[homescreen][] saves bookmark to current document onto the home screen, i use this for my main wiki file  
+[reminder][] saves bookmark into a due or fantastical reminder (re–enable selection in the workflow if you want to go back to the specific last point you were in within the document)  
+
+##### make editorial wiki
+make your own workflow combining Set URL (include selected range) and set clipboard in order to copy a link to the current page into the clipboard  
+[markdownlink][] select text to be linked, then use this to create markdown link based on current clipboard contents
+
+##### make editorial shortcuts
+for example, if you have several often–used documents, you can create workflows that open each of these, and set keyboard shortcuts/abbreviations for each of these workflows, and use them to swap between the documents. if you use abbreviations exclusively (i.e. combinations of letters) then you can use set these to open/save your bookmarks, for example, using the on–screen keyboard as well as a bluetooth keyboard. the bookmark system has an advantage that you can set the current location of the cursor readily. additionally you can set a bookmark for the bookmark file in order to edit it.
+
+currently if you use abbreviations, you do have to have the cursor active for the abbreviations to type, and therefore activate.
+
+You can also create a version of gabe's bookmarks workflows that saves only one single bookmark that is overwritten entirely each time it is saved, and set this to a special shortcut so that you can easily open that particular file, and also be able to set it to the current location using a shortcut. perhaps in future Ole might offer a facility to open the last cursor location for a file; this would be especially useful for longer files. You can do this process semi–manually by setting a new bookmark each time and deleting older ones for the same file. Alternatively, just make a shortcut to the file, and use the search function to find where you want to go (this works better if you are using an external keyboard).
+ 
+[bookmarks]: http://www.macdrifter.com/2013/12/bookmarker-macros-for-editorial.html
+
+[homescreen]: http://www.editorial-workflows.com/workflow/5881089591607296/C9cWHZLAVZQ
+
+[reminder]: http://www.editorial-workflows.com/workflow/5773031167229952/WW0yEbgmZzY
+
+[markdownlink]: http://www.editorial-workflows.com/workflow/5880461184204800/WykOoS1yXEM
+
+[workflows]: http://www.editorial-workflows.com/workflows
+
+[editorialdocs]: http://omz-software.com/editorial/docs/
+
+[editorial]: http://omz-software.com/editorial/
+
+## code or large files
+
+<div id="sublime"></div>
+
+##### sublime text
+
+[sublime text][] $70mac expensive but powerful (and speedy) editor, especially good for large files. There are no print options,  you will need something like [marked2](http://makiaea.org/read/techrecommendations.html#marked2) or use another editor for print or export.
 
  | 
 ---: | :---
 cmd–r | (goto symbol) allows you to move between headers easily in a markdown document
 cmd–p | (goto anything) then # then searchterm to jump to next occurrence in the current document
-ctrl–minus | jump back (sublime text 3–only)
+ctrl–minus | jump back to previous cursor location (sublime text 3–only)
+cmd-ctrl-shift-f | fullscreen mode (I bind this to hyper2-return)
 cmd–ctrl–p | switch project within window (make some projects to hold collections of files/folders that you use together) — though in practice am using two windows (often placed directly over each other) for two different projects and switching between them using cmd–`
 cmd–d | select word, repeat to use multiple cursors to select subsequent words/phrases
 cmd–u | unselect word/phrase
@@ -308,10 +232,12 @@ cmd–k–d | (sequential k then d) to skip to next candidate. left or right to 
 cmd–ctrl–g | select all occurrences of word/phrase
 cmd–click | non–successive lines start multiple cursor, or
 <span style="white-space:nowrap;">cmd–shift–L</span> | highlight column with cursor then cmd–shift–L to start column–mode multiple cursor (useful if you want to edit multiple lines at specified places). you can move the cursors as you would a normal cursor e.g. cmd–left to go to the beginning of the line (if you have text running across multiple lines you might want to do cmd–left a few times to ensure it really is the beginning of the line rather than the beginning of the wrapped line)
+tab | autocompletion — be careful with this!
+cmd–number | switch to tab
 
 modify by going into sublime text preferences — browse packages
 
-my current sublime text preferences — user preferences
+my user preferences:
 
 	{
 		"caret_style": "solid",
@@ -322,14 +248,14 @@ my current sublime text preferences — user preferences
 		"line_numbers": false
 	}
 
-my current sublime text preferences — distraction free preferences
+my distraction free preferences; note the larger font size
  
 	{
  		"font_size": 24,
  		"wrap_width": 0
 	}
 
-my current sublime text VBScript.sublime-settings (there are a lot of comments in the code I have to work with, so word wrap is on…)
+my VBScript.sublime-settings (lots of comments in the code, so word wrap is on…)
 
 	{
 		"gutter": true,
@@ -338,23 +264,352 @@ my current sublime text VBScript.sublime-settings (there are a lot of comments i
 		"word_wrap": "true"
 	}
 
-my current theme is based on a custom solarized dark theme with markdown highlighting https://gist.github.com/eleclerc/1904917/download#
-and is stored in /Users/maki/Library/Application Support/Sublime Text 3/Packages/User/makiaea.tmTheme
+my [current theme][] is based on a custom [solarized dark theme][] with markdown highlighting and is stored in
 
-you can create your own shortcuts to projects or even open them from the command line e.g.  for sublime text 3: /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /Users/maki/Documents/Dropbox/datafiles/20130416maki.sublime-project
+	/Users/maki/Library/Application Support/Sublime Text 3/Packages/User/makiaea.tmTheme
 
-If you need to use VBScript syntax highlighting, https://github.com/SublimeText/VBScript is a nice package to download
+you can create your own shortcuts to projects or even open them from the command line e.g. for sublime text 3:
 
-I set a keyboardmaestro shortcut F1 to switch to sublime text, and keyboardmaestro cmd–enter to toggle distraction free mode
+	/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /Users/maki/Documents/Dropbox/datafiles/20130416maki.sublime-project
+
+package for [highliting for VBScript syntax][]
+
+<div id="smartmarkdown"></div>
+
+[smartmarkdown][] sublime3 package for moving between and folding (markdown) headlines. install by downloading zip from github, renaming directory to "SmartMarkdown", then placing directory into
+
+	/Users/yourusername/Library/Application Support/Sublime Text 3/Packages/
+
+NB assumes #(space)headers, not #header as we are using. shortcuts:
+
+ |
+---: | :---
+tab | toggle smart folding (when used within a header)
+shift-tab | global toggle all folding (i use this often for navigation as i don't always remember the headings of all files)
+cmd-shift-, | decrease header level
+cmd-shift-. | increase header level
+ctrl-c ctrl-n | move to next (any) headline
+ctrl-c ctrl-p | move to previous (any) headline
+ctrl-c ctrl-f | move to next same-or-higher-level headline
+ctrl-c ctrl-b | move to previous same-or-higher-level headline
+
+[sublimeacmeplumbing][] sublime3 package that commandeers the secondary mouse button in sublime text and lets you click to open urls including local file urls etc. NB only works for files which do not contain a space, and is useful really only for text or image files as the files will open within sublime text 3 rather than open in an external program
 
 Set [marked][marked build] to open current (markdown) file, processed (uses build, shortcut cmd-b)
 
 [marked build]: http://support.markedapp.com/kb/how-to-tips-and-tricks/marked-bonus-pack-scripts-commands-and-bundles
-
 [sublime text]: http://www.sublimetext.com
+[current theme]: https://www.dropbox.com/s/rqu9lb41xymcoya/makiaea.tmTheme
+[solarized dark theme]: https://gist.github.com/eleclerc/1904917/download#
+[smartmarkdown]: https://github.com/demon386/SmartMarkdown#v02-support-for-sublime-text-3-added-by-unowen
+[sublimeacmeplumbing]: https://github.com/lionicsheriff/SublimeAcmePlumbing
+[highliting for VBScript syntax]: https://github.com/SublimeText/VBScript
 
-##[d3][]
-d3.js is a great javascript library for plotting graphs. I use it to plot data from csv and tsv files.
+[dropbox]: https://www.dropbox.com/tour
+[googledrive]: https://drive.google.com
+
+# store
+
+## data
+
+<div id="dropbox"></div>
+<div id="googledrive"></div>
+
+##### dropbox and googledrive
+
+Save non–security–sensitive important data to a single folder within [dropbox][] (free); makes an offsite copy and enables reliable syncing between phone and computer. also consider [googledrive][]
+
+## code
+
+<div id="github"></div>
+
+##### github
+
+[github][] (free) share and store code online
+
+[github]: https://github.com
+
+# email
+
+## process inbox
+
+<div id="dispatch"></div>
+
+##### dispatch
+
+[dispatch][] £2.99ios by the producers of due; gives better options for acting on messages rather than just sorting them like mailbox app does.
+
+i set the quick action to "archive" which moves the message to my "lena" folder (personal messages); and set quick move to the "keep" folder (non–personal messages)
+
+[dispatch]: http://www.dispatchapp.net
+
+## retrieve long–term
+
+<div id="mailmate"></div>
+
+##### mailmate
+
+[mailmate][] $50mac email app; NB the following does not work as of 20131119: can set up internal multi-stroke key bindings e.g. my ~/Library/Application Support/MailMate/Resources/KeyBindings/makiaea.plist contains something like:
+
+	"m" = {
+		"l" = ( "moveToMailbox:", "imap://you@imap.example.com/3lena" );
+		"t" = ( "moveToMailbox:", "imap://you@imap.example.com/2do" );
+		"w" = ( "moveToMailbox:", "imap://you@imap.example.com/4wait" );
+		"k" = ( "moveToMailbox:", "imap://you@imap.example.com/5keep" );
+		"m" = "moveToMailbox:"; // Opens the “Move to Mailbox...” window
+	};
+
+[mailmate]: http://freron.com/about/
+
+# tasks
+
+## timed irregular
+
+<div id="due"></div>
+
+##### due
+
+[due][] £6.99mac £2.99ios very flexible for repeating reminders e.g. repeat on three weekdays only. You can also add urls (and non–website ios urls) to the reminder, which will open automatically on completing the reminder. I use this to remind me to do and redo things regularly, e.g. maintenance tasks
+
+example [due url scheme][] code:
+
+	due:///add?title=entertitlehere&secslater=enternumberofsecondshere
+
+due still asks us to confirm the reminder. Would love a url scheme to set timers…
+
+[due url scheme]: http://www.dueapp.com/developer.html
+[due]: http://www.dueapp.com
+
+## untimed irregular
+
+<div id="recur"></div>
+
+##### recur
+
+[recur][] £0.69ios shows time since last marked task completed ("reverse–todo–list"). especially useful if a habit or task is irregular, but you don't want to be actively reminded of it, yet want to keep track of when you last did something to do with the task. can link to [carrot to–do][]
+
+[recur]: https://itunes.apple.com/us/app/recur!-the-reverse-to-do-list/id715147898?mt=8
+[carrot to–do]: http://meetcarrot.com
+
+## timed regular
+
+<div id="fantastical"></div>
+
+##### fantastical
+
+[fantastical][] £13.99mac (fantastical2 £2.99ios) make calendar entries by typing in "natural language" e.g. appointment today at 10
+
+fantastical action set using fleksy:
+
+	launch://x-callback-url/clipboard/convert?format=plaintext&x-success=fantastical2%3a%2f%2f[list:fantastical action set|reminder=parse?reminder=1&sentence=|event=parse?reminder=0&sentence=| search=search?query=]{{[prompt-fleksy: send to fantastical]}}
+
+(single square brackets mean the content is auto–encoded)
+
+[fantastical]: http://flexibits.com/fantastical
+
+## list and random timed
+
+<div id="clear"></div>
+
+##### clear
+
+[clear][] £4.99mac, £2.49ios) the original gesture–enabled to–do list. can drag tasks between lists. I use this for lists of tasks that I need to use across devices, and those that I sometimes reuse, e.g. packing lists, things to repair.
+
+[clear]: http://www.realmacsoftware.com/clear/
+
+# publish
+
+## ebook (epub)
+
+<div id="pandoc"></div>
+
+##### pandoc
+
+[pandoc][] free–mac publish custom epub via command line; [pandoc documentation][], [pandoc on ios][] via pythonista and webservice. example [shell script 1][songbook1 script], [shell script 2][songbook2 script], [shell script 3][songbook3 script] for creating three different epubs via pandoc from multiple markdown files, images and audio in the same root folder on a mac.
+
+[pandoc]: http://www.johnmacfarlane.net/pandoc/
+[pandoc on ios]: http://wcm1.web.rice.edu/pandoc-on-ios.html
+[pandoc documentation]: http://www.johnmacfarlane.net/pandoc/README.html
+[songbook1 script]: https://www.dropbox.com/s/h6k8tktblyjegrg/20131119epx-songbook.sh
+[songbook2 script]: https://www.dropbox.com/s/j2gy89ow9wt0ncp/20131119epx-songbook2.sh
+[songbook3 script]: https://www.dropbox.com/s/goi53748gckwpps/20140309epx-songbook2-audio.sh
+
+## web
+
+##### octopress
+
+[octopress][] freemac oldie but goodie, can integrate with github for hosting pages
+
+[octopress]: http://octopress.org
+
+# rest
+
+## soundscapes
+
+<div id="naturespace"></div>
+<div id="thunderspace"></div>
+
+##### thunderspace and naturespace
+
+[naturespace][] and [thunderspace][] pay–ios relaxing recordings of nature sounds created by using microphones placed on a dummy head — recreates spatial relationships really well. I like naturespace's "infinite shoreline" sound a lot; but mainly use thunderspace now.
+
+[naturespace]: http://www.naturespace.com
+[thunderspace]: http://thunderspace.me
+
+<div id="show"></div>
+
+## different screen colours at night
+
+<div id="flux"></div>
+
+##### f.lux
+
+[f.lux][] free–mac changes screen colours to make them look warmer (redder) at night
+
+[f.lux]: http://justgetflux.com
+
+<div id="tranquility"></div>
+
+##### tranquility
+
+[tranquility][] free–mac night vision mode; helpful if you are not using a dark theme in your apps by default
+
+[tranquility]: http://www.pixio.com/auto-updating-tranquility/
+
+## range of formats / subtitles
+
+<div id="vlc"></div>
+
+##### vlc
+
+[vlc][] (free mac and ios) plays a lot of different video formats and handles subtitles very well, sometimes buggy on playback
+
+[vlc]: https://videolan.org/vlc/
+
+<div id="infuse2"></div>
+
+## local–wireless transfer
+
+##### infuse2
+
+[infuse2][] (infuse2pro £4.99ios) easy browser transfer of files
+
+[infuse2]: http://firecore.com/infuse
+
+## passwords
+
+<div id="1password"></div>
+
+##### 1password
+
+[1password][] $39.99mac $31.99mac[educational][1password educational] £12.99ios password manager can remember your passwords across different machines. in–built automation limited to browser passwords. ios version restricted to opening passworded links within the app's own browser, use url scheme 
+
+	ophttp://sitelocation
+
+if you want to open a site using launchcenter pro for example, in 1password for ios. 
+
+[1password]: https://agilebits.com/onepassword
+[1password educational]: https://agilebits.com/store/educational
+
+# calculator
+
+## pair conversions
+
+<div id="convertizo"></div>
+
+##### convertizo
+
+[convertizo][] freeios
+
+[convertizo]: http://www.perfectdimension.com/apps/convertizo
+
+## multiple conversions
+
+<div id="amount"></div>
+
+##### amount
+
+[amount][] £0.69 convert units, reorder lists of units so your most–often used conversions are at the top of the page.
+
+[amount]: http://marcotorretta.com/#amount
+
+## visual
+
+<div id="calca"></div>
+
+##### calca
+
+[calca][] £1.99ios£2.99mac
+
+[calca]: http://calca.io
+
+## visual scale in unit conversions
+
+<div id="theconverted"></div>
+
+##### the converted
+
+[theconverted][] £1.99ios shows visual scales of conversions, great for showing and learning conversion ranges; reminiscent of a slide rule…
+
+[theconverted]: http://ideon.co/theConverted
+
+## programmable scientific
+
+<div id="pcalc"></div>
+
+##### pcalc
+
+[pcalc][] $9.99ios/mac scientific calculator, if you don't want to do it in python etc.
+
+[pcalc]: http://www.pcalc.com/iphone/
+
+## tally
+
+<div id="tally"></div>
+
+##### tally
+
+[tally][] free–iphone incrementable and decrementable tally, also can use x-callback-url. example [tally url scheme][], increments tally titled "test" and returns to editorial app:
+
+	tally://x-callback-url/increment?title=test&x-success=editorial://
+
+[tally]: http://agiletortoise.com/tally/
+[tally url scheme]: http://agiletortoise.com/developers/tally/
+
+## hide menubar icons
+
+<div id="bartender"></div>
+
+##### bartender
+
+[bartender][] $15mac hides icons from menubar
+
+[bartender]: http://www.macbartender.com
+
+## compare file contents
+
+<div id="kaleidoscope"></div>
+
+##### kaleidoscope
+
+[kaleidoscope][] $29.99educationmac nice interface to compare text/image files, folders; with a little bit of scripting/keyboardmaestro, can compare webpage text to yesterday's captured version e.g. set keyboardmaestro to capture the current text, then run
+
+	#!/bin/bash
+	DATE_TODAY=$(date +"%Y%m%d")
+	DATE_MINUS=$(date -v -1d +"%Y%m%d")
+	FILE_CONTENT=$(pbpaste)
+	echo "$FILE_CONTENT" >> /path/"$DATE_TODAY"filename.txt
+	/usr/local/bin/ksdiff /path/"$DATE_MINUS"filename.txt /path/"$DATE_TODAY"filename.txt
+
+[kaleidoscope]: http://kaleidoscopeapp.com
+
+## graphs
+
+<div id="d3"></div>
+
+##### d3.js
+
+[d3.js][] free–mac is a great javascript library for plotting graphs. I use it to plot data from csv and tsv files.
 
 You need to run a webserver to serve your files. I use an alfred workflow to run a local webserver on my mac: (see [oreilly d3 setup][] for a fuller explanation)
 
@@ -376,7 +631,7 @@ And tend to view/print from firefox as css3 transform: translate is better suppo
 * [api reference][]
 * [variable precision in d3 format][]
 
-[d3]: http://d3js.org
+[d3.js]: http://d3js.org
 [stacked grouped bar chart]: http://bl.ocks.org/gencay/4629518
 [square circle spiral illusion]: http://bl.ocks.org/mbostock/1386444
 [scott murray's d3 tutorials]: http://alignedleft.com/tutorials/d3/
@@ -389,365 +644,496 @@ And tend to view/print from firefox as css3 transform: translate is better suppo
 [oreilly d3 book]: http://chimera.labs.oreilly.com/books/1230000000345/ch02.html
 [api reference]: https://github.com/mbostock/d3/wiki/API-Reference
 [variable precision in d3 format]: http://stackoverflow.com/questions/10310613/variable-precision-in-d3-format
-
-##[mamp][]
-useful for testing d3 locally, alternatively use the python web server as explained in [oreilly d3 setup][] and above. 
-
-* download, install
-* open new app "mamp"
-* select server root directory
-* select start page (use notation relative to root)
-* set to start servers on mamp start
-* set to stop servers on mamp stop
-* [mamp documentation][]
-* your localhost is something like http://localhost:8888/MAMP/?language=English
-
-[mamp]: http://www.mamp.info/en/index.html
-[mamp documentation]: http://documentation.mamp.info/en/mamp/first-steps
 [oreilly d3 setup]: http://chimera.labs.oreilly.com/books/1230000000345/ch04.html#_setting_up_a_web_server
 
-##[launchservices][]
-for developers that launch apps a lot: rebuild your Launch Services database on Mountain Lion (use at your own risk!):
+## web programming
 
-	sudo /System/Library/Frameworks/CoreServices.framework/Versions/Current/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
+<div id="firefox"></div>
 
-[launchservices]: http://furbo.org/2013/04/22/launch-services-woes/
+##### firefox and firebug extension
 
-##quickcursor replacement
-set ctrl–alt–cmd–delete to extract all text from current document, remember current application, open sublime text, paste  
-waits until ctrl–alt–cmd–w to extract all text from current document, switch to previous remembered application, paste
+[firefox][] free–mac use with the [firebug][] extension. some of my css3 d3 graph manipulations are better supported in firefox than safari
 
-based on:  
-http://rocketink.net/2013/05/quickcursor-keyboard-maestro.html  
-http://www.macdrifter.com/2011/11/keyboard-maestro-variables-remember-current-application.html
+Printing landscape in firefox: the Portrait and Landscape buttons (available when you use the print dialog in Safari) are not available on the print dialog in Firefox. To change to landscape, go to File - Page Setup and select landscape.
 
-##useful helper programs
+Changing margins in firefox as of 20131009: go to address
 
-###safari extensions
-* 1password
-* adblock
-* maybe (facebook cleaner)
+	about:config
 
-###vpn toggle
-using combination of 1password, keyboardmaestro, applescript and alfred for quick vpn toggling
-
-* set record for password in 1password
-* create macro in keyboardmaestro that opens 1password (pauses for you to type in password if you need to), searches for the record, copies the password into the clipboard
-* runs the applescript to toggle vpn, which is already set with the vpn details
-* pastes the password into the vpn window and starts it
-
-to run, use the keyboardmaestro trigger by applescript, and paste that trigger applescript into alfred workflow with trigger vpn
-
-###[broomstick][]
-(free) hide f.lux, spotlight and dropbox icons from menubar. If you want a more comprehensive app and are willing to pay $15, try [bartender][]
-
-[broomstick]: http://www.zibity.com/broomstick
-[bartender]: http://www.macbartender.com
-
-###[audacity][]
-(free) open–source audio recorder
-
-[audacity]: http://audacity.sourceforge.net
-
-###[firefox][]
-useful web browser, I use this with the [firebug][], [printedit][], [doubletapzoom][] extensions, and because some of my d3 graph manipulations don't work yet in my version of safari
-
-Printing landscape in firefox: the Portrait and Landscape buttons (available when you use the print dialog in Safari) are not available on the print dialog in Firefox. To  change to landscape, go to File - Page Setup and select landscape.
-
-[download youtube videos as mp4][] firefox extension to download and convert to mp4 (appears as "download" button within the firefox window)
+in the Filter field, type "print", change the relevant values (these differ between versions of firefox)
 
 [firefox]: http://www.mozilla.org/firefox
 [firebug]: https://getfirebug.com
-[printedit]: https://addons.mozilla.org/en-US/firefox/addon/print-edit/
-[doubletapzoom]: https://addons.mozilla.org/en-us/firefox/addon/pinch-to-zoom-and-double-ta/
-[download youtube videos as mp4]: https://addons.mozilla.org/en-us/firefox/addon/download-youtube/
 
-###[ffmpeg][]
-(free) open–source encoder (binary)
+## preview/export markdown output
 
-[ffmpeg]: http://ffmpegmac.net
+<div id="marked2"></div>
 
-###[pandoc][]
-(free) publishing custom epub via command line
+##### marked2
 
-[pandoc]: http://www.johnmacfarlane.net/pandoc/
+[marked2][] $11.99mac invaluable preview for people who write in markdown
 
-###[github][]
-(free) share and store code online
+fletcher's guide to [multimarkdown syntax][multimarkdown syntax guide]  
+example multimarkdown table: NB the complete specification of the beginnings and ends of lines, this maintains compatibility with both multimarkdown and pandoc
 
-[github]: https://github.com
+	 ||||
+	 |:---|:---|:---|
+	 |ᾄδειν | ᾖσε | ᾠδή|
+	 |Ἄιδειν | Ἦισε | Ὠιδή|
 
-###fsck to check hard disk
-I run this occasionally (my disk is /dev/disk1, yours may be different)
+and this is the resulting table:
 
-	sudo fsck_hfs -l /dev/disk1
+||||
+|:---|:---|:---|
+|ᾄδειν | ᾖσε | ᾠδή|
+|Ἄιδειν | Ἦισε | Ὠιδή|
 
-###[gpg][]
-not that it seems to mean much in the PRISM era, but if you are expected to encrypt communications for legal reasons, then gpg is a good way of doing it. Also, [enigmail][] + thunderbird
+michel's guide to php-markdown/multimarkdown [table syntax][]
 
-[gpg]: https://gpgtools.org/#gpgsuite
-[enigmail]: https://addons.mozilla.org/en-US/thunderbird/addon/enigmail/
+[why markdown?]: http://brettterpstra.com/2011/08/31/why-markdown-a-two-minute-explanation/
+[table syntax]: http://michelf.ca/projects/php-markdown/extra/#table
+[marked2]: http://marked2app.com
+[multimarkdown syntax guide]: https://github.com/fletcher/MultiMarkdown/wiki/MultiMarkdown-Syntax-Guide
 
-###[fontforge][]
-mac binary made by Pedro Amado
+<div id="learn"></div>
 
-[fontforge]: http://www.typeforge.net/blog/2011/05/23/fontforge-binaries/
+# read
 
-##block websites
-set any websites you want to block in the following manner
+## epub
 
-	sudo nano /etc/hosts
+<div id="marvin"></div>
 
-add a line for each website you want to block:
+##### marvin
 
-	127.0.0.1 facebook.com
+[marvin][] £1.99ios for reading books in epub format, good customisation options e.g. page forward on tapping left–hand–edge, minimum margins, brightness control gesture, night mode; note does not utilise fonts embedded in epub files
 
-this tells the system to try to look for facebook.com locally — it will not find it, so returns page not found. optionally, flush the cache:
+[marvin]: http://marvinapp.com
 
-	dscacheutil -flushcache
+<div id="ibooks"></div>
 
-<div id="iosbasic"></div>
+##### ibooks
 
-#ios basic
-
-##[what knot to do][whatknot]
-(free) learn some useful knots. I really really like this app.
-
-[whatknot]: http://www.columbia.com/iPhone-Knot-App/iPhone_App_Page-WhatKnot,default,pg.html
-
-##[ibooks][]
-(free) for reading books in epub format
+[ibooks][] free–ios/mac for reading books in epub format, displays embedded epub font correctly
 
 [ibooks]: https://itunes.apple.com/us/app/id364709193
 
-##[naturespace][] and [thunderspace][]
-(free, £0.69) I like naturespace's "infinite shoreline" sound a lot; the lightning effect in thunderspace is great!
+# games
 
-[naturespace]: http://www.naturespace.com
-[thunderspace]: http://thunderspace.me
+## cooperative mayhem
 
-##[cobook][]
-(free) combines your addressbooks
+<div id="spaceteam"></div>
 
-[cobook]: https://cobook.co
+##### spaceteam
 
-##[dropbox][]
-(free) installing the app allows other apps access to your files on dropbox
+[spaceteam][] freeios/android cooperative game 2–4 players
 
-[dropbox]: https://www.dropbox.com/mobile
+[spaceteam]: http://www.sleepingbeastgames.com/spaceteam
 
-##[mailbox][]
-(free) currently only works for google mail accounts; great way of clearing your inbox, as it uses swipe actions to sort and move messages into the three categories I use: (a) to do, (b) to keep, (c) to wait. I use a similar system with email on my laptop by setting keyboard maestro shortcuts for the three categories that are restricted to the email program (F10 -> a, F11 -> b , F12 -> c, all conveniently located near the delete button; also cmd–F09 -> view inbox, cmd–F10 -> view folder a etc. NB this is easy in Thunderbird, as you can specify to move to or view folders, but Apple Mail workaround is to use favourite folders (drag and drop into favourites bar) and then use keyboardmaestro macros to activate standard favourite folders shortcuts… outcome is that you can hide your mailbox tree pane if you no longer need it.)
+## cooperative dance
 
-[mailbox]: http://www.mailboxapp.com
+<div id="bounden"></div>
 
-##[clear][]
-£1.49 changed the use of gestures on non–jailbroken iphones; still a great todo list
+##### bounden
 
-##[vlc][]
-(free) excellent support for different filetypes and subtitles
+[bounden][] £2.49ios use an app to dance with a friend?!? any excuse to dance is a good excuse, right?
 
-##[goodreader][]
-£2.99 read pdfs and watch videos (note that subtitles do not appear to work well). also has good instructions for using [password access control][] on files or folders
+[bounden]: http://playbounden.com
 
-[goodreader]: http://www.goodiware.com/goodreader.html
-[password access control]: http://goodiware.com/gr-man-general.html#password
+## get chased by zombies for fitness
 
-##[yogastudio][]
-£1.99 url scheme to open in launch center pro is yogastudio://
+<div id="zombies"></div>
 
-[yogastudio]: http://yogastudioapp.com
+##### zombies, run!
 
-##[zombies, run!][] and zombies, run! 2
-get chased by (imaginary) zombies :)
+[zombies, run!][] pay–ios get chased by (imaginary) zombies :)
 
 [zombies, run!]: https://www.zombiesrungame.com
 
-<div id="iosintermediate"></div>
+## yoga
 
-#ios intermediate
+<div id="yogastudio"></div>
 
-##[due][]
-I this for repeating reminders as it is very flexible in setting times e.g. repeat on three weekdays only. You can also add urls (and non–website ios urls) to the reminder, which will open automatically on completing the reminder.
+##### yogastudio
 
-example [due url scheme][] code:
+[yogastudio][] £1.99ios url scheme to open in launch center pro is yogastudio://
 
-	due:///add?title=entertitlehere&secslater=enternumberofsecondshere
+[yogastudio]: http://yogastudioapp.com
 
-due still asks us to confirm the timer addition but 
+## knots
 
-[due url scheme]: http://www.dueapp.com/developer.html
+<div id="whatknot"></div>
 
-##[fantastical][]
-best calendar i have used so far
+##### what knot to do
 
-##[felix][]
-(not free) app.net client for ios. responsible developer, unlike netbot
+[what knot to do][whatknot] free–ios learn some useful knots. I really really like this app.
 
-[felix]: http://www.tigerbears.com/felix/
+[whatknot]: http://www.columbia.com/iPhone-Knot-App/iPhone_App_Page-WhatKnot,default,pg.html
 
-##[drafts][]
-£1.99 currently my go–to place to temporarily store text ideas until I can process them. (input may be directly into drafts or from fleksy etc.) Use custom dropbox actions (this requires network connection) to append text to several specific files in my dropbox, set to automatically delete the draft after the action is complete — this helps streamline the workflow. I open one of the dropbox files when it is convenient, often on my macbook air, to process the text into its appropriate place. You can search your text in drafts, which byword cannot do. I also use it in conjunction with pythonista for anki data entry. Its [x-callback-url][] scheme is good for chaining automatic actions together on ios.
+## weather
 
-here's a drafts x-callback-url I call from launchcenter pro for sending fleksy text straight to a specified dropbox file, then return to fleksy: (first copy and clear all written in fleksy using two–finger swipe up)
+<div id="weatherline"></div>
 
-	drafts://x-callback-url/create?text=[clipboard]&action=todropboxmakiaea&afterSuccess=Delete&x-success={{fleksy://}}
+##### weatherline
 
-and the drafts action todropboxmakiaea itself contains:
+[weatherline][] $2.99ios shows trends in weather using annotated line graphs
 
-* path: /datafiles/
-* file predefined: fromdrafts
-* ext: md
-* write: append
-* template: [[draft]]
+[weatherline]: http://weatherlineapp.com
 
-[drafts]: http://agiletortoise.com/drafts
-[x-callback-url]: http://agiletortoise.com/developers/drafts/
+# languages
 
-##[launch center pro][]
-£1.99 use this mainly to launch pythonista scripts, drafts actions, and schedule opening of some apps. This greatly speeds up access to apps (although there are other faster ways if your iphone is jailbroken, via activator). unfortunately not every single app can be launched.
+## recognition games
 
-example timed action (set timer to 8am saturday) this asks fantastical to make the new event one month in the future, on same day of the week:
+<div id="mindsnacks"></div>
 
-	fantastical://parse?sentence=<;inserteventnamehere 8am>&notes=
+##### mindsnacks
 
-[launch center pro]: http://appcubby.com/launch-center/
+[mindsnacks][] game–based word recognition app
 
-##[pythonista][]
-£4.99 run python scripts. I use this for text processing on the iphone, specifically for anki data input
+[mindsnacks]: http://www.mindsnacks.com
 
-[pythonista]: http://www.omz-software.de/pythonista/
+## sentences and grammar
 
-##[fleksy][]
-(free) a great keyboard for ios (I use invisible silent keyboard mode) — only has a qwerty keyboard, sadly no dvorak option yet. literally can type without looking at the screen. You must then move the text into another program for editing.
+<div id="duolingo"></div>
 
-[fleksy]: http://fleksy.com
+##### duolingo
 
-##[anki][]
-£17.49 great for learning languages etc. takes a lot of time to set up, but worth it
+[duolingo][] free–ios sentences and grammar revision courses
 
-##[1password][]
-£12.99 password manager. restricted currently to opening passworded links within the app's own browser, use url scheme 
+[duolingo]: https://www.duolingo.com
 
-	ophttp://sitelocation
+## create and drill flashcards
 
-if you want to open a site using launchcenter pro for example, in 1password. does not sync currently very easily but will do eventually — but question is, do you want your password files to be on the web, even if encrypted?
+<div id="anki"></div>
 
-##[skysafari pro][]
-£27.99 great for astronomy, very calming when set on timelapse mode, stars revolving through the sky.
+##### anki
+
+[anki][] free–mac £17.49ios flashcards for learning through repeat exposure. great for learning languages etc. takes a lot of time to set up, but worth it. if I didn't use pythonista programs ([maki002][], [maki003][]) for text editing on the iphone I would use the desktop version for data entry/editing
+
+[using custom fonts][] for anki mobile; shinsu handwritten and fangsong printed traditional chinese fonts, download at [cooltext.com][]
+
+[anki]: http://ankisrs.net
+[using custom fonts]: http://ankisrs.net/docs/am-manual.html#custom-fonts
+[cooltext.com]: http://cooltext.com/Fonts-Unicode-Chinese
+[maki002]: https://gist.github.com/makiaea/7628665
+[maki003]: https://gist.github.com/makiaea/5099182
+
+## astronomy
+
+<div id="skysafari"></div>
+
+##### skysafari pro
+
+[skysafari pro][] £27.99ios great for astronomy, very calming when set on timelapse mode, stars revolving through the sky.
 
 [skysafari pro]: http://www.southernstars.com/products/skysafari/
 
-##[textexpander touch][]
-£2.99 I use this for date expansion from a shortcut i.e. dda —> 20130319, as we can't use keyboardmaestro shortcuts in ios like we do on macos
+<div id="shortcuts"></div>
 
-[textexpander touch]: http://www.smilesoftware.com/TextExpander/touch/index.html
+## trackpad/mouse gestures
 
-##[byword][]
-£1.99 Unfortunately you cannot search text so longer files are hard to edit only on ios (rather than using the macos app). most ios text editors cannot do searching or jumping within the text to the term you have searched for, hopefully one will be developed soon that can do this. Brett Terpstra has a [nicely categorised table of ios text editors][]
+<div id="bettertouchtool"></div>
 
-[nicely categorised table of ios text editors]: http://brettterpstra.com/ios-text-editors/
+##### bettertouchtool
 
-##[editorial][]
-£2.99 better than byword, but I don't have an ipad to use it with :) can't wait for an iphone version…
+[bettertouchtool][] free–mac versatile tool, e.g. for shortcuts to resize and move windows across two screens.
 
-[editorial]: http://omz-software.com/editorial/
+ |
+---: | :---
+cmd threefingerswipeup | maximise window
+cmd threefingerswipedown | move window to next monitor
+cmd threefingerswipeleft | maximise window left
+cmd threefingerswiperight | maximise window right
+cmd threefingerclickswipeup | maximise window tophalf
+<span style="white-space:nowrap;">cmd threefingerclickswipedown</span> | maximise window bottomhalf
+**safari–and-finder-specific** |
+threefingerswipeleft | switch to next tab (ctrl–tab)
+threefingerswiperight | switch to previous tab (ctrl–shift–tab)
+**finder-specific** |
+twofingerswiperight | back (cmd-[ )
+twofingerswipeleft | forward (cmd-] )
 
-##[snappycam][]
-£0.69 slightly lower quality than iphone native photographs, but at full iphone resolution, for bursts of up to 20fps. Helpful for capturing baby photos!
+[bettertouchtool]: http://www.boastr.de
 
-[snappycam]: http://www.snappycam.com
+## create workflows
 
-##[prizmo][]
-£2.99 optical character recognition in scans does not require network connection, unlike some other scanning apps
+<div id="alfred"></div>
 
-[prizmo]: http://www.creaceed.com/iprizmo/about
+##### alfred
 
-<div id="iosadvanced"></div>
+[alfred][] £17mac find what you need on your mac; I especially like the multiple clipboard and workflows. Favourite alfred workflows are: [faves][] make lists of favourite folders and files, [last changed files][], [recent items][], [wifi toggle][], [create new file][], [show hidden files][], [copy path][], [youtube download][], [mavericks tags][], [keyboardmaestro macros][]
 
-#ios advanced
-the following apps are only available after jailbreaking the iphone, via the cydia jailbreak store; some of these issues are addressed by ios7. note that jailbreaking can break functions such as siri, so there are some downsides.
+mavericks tags is especially helpful as you can now tag icloud documents in mavericks, and thus you can easily access them using mavericks tags.
 
-##jailbreaking gotcha
-after backing up the phone,  wiping the phone, jailbreaking, then restoring the phone, you might experience a heart–stopping moment when you think that all you notes and application data may have been erased from the phone. This can occur if you have iTunes set not to sync applications — and if your notes are in applications that have not been synced or reinstalled since the wipe, then although the data is there in the data folders, the applications to reach the data are not (for the moment) available… I've forgotten this more than once and it's a shock until you remember!
+[alfred]: http://www.alfredapp.com
+[faves]: http://dferg.us/favorite-folders-workflow
+[last changed files]: http://www.alfredforum.com/topic/1715-find-files-recently-changed-similar-to-trickster-functionality/
+[create new file]: http://alfred.daniel.sh
+[wifi toggle]: https://github.com/aiyodk/Alfred-Extensions/tree/master/AlfredApp_2.x/Wi-Fi-Toggle
+[show hidden files]: https://www.dropbox.com/s/xj2ayvsmzyd1ln3/Magician.alfredworkflow
+[copy path]: http://lucatnt.com/2013/04/some-useful-alfred-2-workflows/
+[recent items]: http://www.alfredforum.com/topic/713-recent-docs-folders-apps-favorites-interaction-with-open-and-save-dialogs-now-with-auto-path-30/?hl=%2Brecent+%2Bitems
+[youtube download]: http://dferg.us/youtube-download-alfred-2-workflow/
+[mavericks tags]: http://markokaestner.com/blog/handle-mavericks-tags-with-alfred
+[keyboardmaestro macros]: https://github.com/iansinnott/alfred-maestro
 
-##activator
-(free) I no longer have to use the home button much. Finger gestures can be set via the Activator app to do many of the actions for which I would have previously needed to use the home button. For example, returning to the springboard homescreen (the icon screen) or to change from one app to another.
+<div id="keyboardmaestro"></div>
+
+##### keyboard maestro
+
+[keyboardmaestro][] £24.45mac automates repetitive tasks. Can also create keyboard shortcuts for the functions or files you want (e.g. [excel paste value][]). Disable and enable macros, e.g. only the set that I want active. Can specify particular macros to be active only within certain apps — good for reusing the same hotkey for slightly different functions in different apps. Use the preferences: sync macros option to save the preferences file to dropbox so you can use the same settings across different computers.
+
+[keyboardmaestro]: http://www.keyboardmaestro.com
+[excel paste value]: https://www.dropbox.com/s/9tujfg45kgys2vu/20130405excelpastespecial.kmmacros
+[macdrifter.com]: http://www.macdrifter.com/2011/11/keyboard-maestro-variables-remember-current-application.html
+
+<div id="pythonista"></div>
+
+##### pythonista
+
+[pythonista][] £4.99ios run python scripts. e.g. text processing on the iphone
+
+[pythonista]: http://www.omz-software.de/pythonista/
+
+<div id="launch"></div>
+
+##### launch center pro
+
+[launch center pro][] £1.99iphone£2.99ipad can schedule opening of some apps — unfortunately not every single app can be launched. e.g. [new reminder][]; [launch center pro documentation][]; [federico's review of launch center pro 2.1][federicoreview]; example prompt calendar action using fantastical2:
+
+	fantastical2://parse?sentence=[prompt]&notes=&add=1
+
+example timed action using fantastical 2 (set timer to 8am saturday) this asks fantastical to make the new event one month in the future, on same day of the week, and add it immediately (add=1) rather than wait for confirmation
+
+	fantastical2://parse?sentence=<;inserteventnamehere 8am>&notes=&add=1
+
+youtube to set video list
+
+	youtube://[list:youtube action set|gangnam style=9bZkp7q19f0|peppa1=qADHg8BHJJ4|peppa2=0u7-NUjrQXs]
+
+[federicoreview]: http://www.macstories.net/reviews/launch-center-pro-2-1-fleksy-keyboard-lists-photo-attachments-and-share-sheets/
+[new reminder]: http://launchcenterpro.com/mfw31w
+[launch center pro documentation]: http://help.contrast.co/hc/en-us
+
+[launch center pro]: http://appcubby.com/launch-center/
+
+## keyboard shortcuts
+
+why do keyboard shortcuts help? spend less time searching in menus or moving the mouse/trackpad for often–used functions.
+
+##### basic mac shortcuts
+
+ |
+---: | :---
+cmd-a | select all
+cmd-c | copy
+cmd-v | paste
+cmd-tab | shift between current and last used application
+cmd-w | close current window
+cmd-q | close current application
+alt-right | move one word right
+alt-left | move one word left
+
+##### intermediate mac shortcuts
+
+ |
+---: | :---
+ctrl-a | beginning of line (or fn-left for home)
+ctrl-e | end of line (or fn-right for end)
+ctrl-d | forward delete
+ctrl-k | kill to end of line
+ctrl-y | yank the killed text back (separate from copy paste clipboard)
+ctrl-o | paragraph break but keep cursor is same place
+ctrl-t | transpose letters
+opt-delete | delete previous word
+ctrl-b | move back one letter
+ctrl-f | move forward one
+ctrl-n | move next line
+ctrl-p | move previous line
+cmd-` | to shift to between the current and next windows within the same application
+<span style="white-space:nowrap;">ctrl-cmd-shift-4</span> | select screen area to capture to image in clipboard (handy for pasting screenshots in an email)
+ctrl-shift-power | (on macbook air) lock screen, if require password immediately is set for after sleep or screen saver begins
+F1-F12 | in system preferences, keyboard; use all F1, F2, etc. keys as standard function keys (press the Fn key to use the special features printed on each key)
+tab | in system preferences, keyboard shortcuts; enable full keyboard access (tab can move keyboard focus in all controls)
+
+I like using a dvorak–layout keyboard as I touch–type; this can be set in system preferences — keyboard
+
+<div id="karabiner"></div>
+<div id="seil"></div>
+
+## advanced mac rebinding
+
+This technique creates three special keys on your mac keyboard. Initially most people might start with just one special key, *hyper*, and later add others.
 
  | 
- ----: | :----
-slide single topleft down | fleksy
-slide single topcentre down | launch center pro (see section above)
-slide single topright down | sleep
-slide single left in | ibooks
-slide single right in | whatknot
-slide single bottom left up | home button
-<span style="white-space:nowrap;">slide single bottom centre up</span> | switcher
-slide single bottom right up | bluetooth preferences (e.g. quickly add bluetooth keyboard)
-slide single top out | thunderspace
-slide single left out | 
-slide single right out | anki
-slide single bottom out | lastapp (changes to last used app) start from above keyboard if showing, to prevent accidental keystrokes)
-slide left side up | clear
-slide left side down | drafts
-slide right side up | due
-slide right side down | fantastical
-power connected | sleep
-power disconnected | sleep
-slide left status bar | airplane toggle
-slide right status bar | wifi toggle
-hold status bar | rotation
-slide double top down | activator
-both volume buttons | snappycam (for quickest access) also activator disabled within snappycam so important events not missed
-toggle mute switch twice | flashlight toggle (to prevent accidental toggle) plus sleep screen
-tap and hold on status bar | rotation toggle
-five finger pinch | volume down
-five finger spread | volume up
-four finger pinch | play/pause toggle
-four finger spread | clock
+---: | :--- | :---
+tab | tap | normal tab
+tab | hold | hyper (shift–ctrl–alt–cmd) — less often used
+caps lock | tap | access alfred
+caps lock | hold | hyper2 (shift–ctrl–cmd) — most often used as it is in the home row
+left shift | tap | access alfred snippets
+left shift | hold | normal shift
 
-this enables silent operation of the iPhone if you learn how to tap softly — if you regularly wake to take notes in the middle of the night while sharing a bed with a sleeping spouse or partner you will especially appreciate this!
+Alfred and keyboardmaestro can be used easily without this, but rebinding three "helper" keys speeds access to shortcuts, applications, macros etc. Caps lock is taken over entirely, while tab and left shift retain their normal usage but are also given an additional property.
 
-##lastapp
-(free) used in conjunction with activator to change to the last used app
+Keyboardmaestro is application–aware enough to know when you invoke it within applications, and has options to set shortcuts this way. Thus we can use two discrete levels of shortcuts: one general level, which is the same when activated from any application (hyper2+key), and a second application–specific level, which is unique to each application or set of applications (hyper+key).
 
-##winterboard
-(free) allows me to remove both the text under the icons and the text under the folders. download the "no clock" theme for winterboard and use it to remove the clock from the status bar (when you need the clock you can still use the clock app — i tend to set reminders in the due app mostly instead)
+You could also separate the usage of hyper2, for example, by combination of letters and numbers — combine hyper2 with letters for applications etc., combine hyper2 with numbers for specific files.
 
-##nolockscreen
-(free) the lockscreen is redundant for me. I keep no unencrypted secret data on my phone, and it is almost always with me. Thus I don't benefit from the lockscreen other than helping to switch off the phone quickly when the phone is inadvertently activated. So it is worthwhile for me to use the free jailbreak NoLockScreen app, which bypasses the lockscreen. As someone who turns off the screen on the phone a lot, there's a significant time and immediacy gain. 
+Here we also use Alfred as a shortcut "menu" for those shortcuts which we don't want to commit to memory as a hyper2+shortcut; that is, we activate alfred using caps lock (tap), the type a few letters (e.g. for screen saver, activate alfred, type scr).
 
-##f.lux
-(free) changes the hue of the phone's screen depending on what time of day it is. 
+Oddly enough, hyper+w, hyper+v, hyper+z, hyper+x do not work on my dvorak keyboard layout, because a dvorak v = . and w = , and z = / and these combinations are reserved for sysdiagnose and stackshot (programmer utilities within the operating system)
 
-##swipeselection
-(free) allows us to swipe on the keyboard to move the cursor or in conjunction with shift, to select text.
+An additional bonus of this method is that your hands can stay on the "home row" more, and your left little finger gets more of a workout!
 
-##sbprofiles
-20130803 i don't use this anymore. unfortunately not 100% reliable currently (free; requires sbsettings to be downloaded and run once, wireless trigger (not toggle) requires payment) add airplane sbsettings toggle. I use this to automatically turn off airplane mode on certain mornings of the week, and turn it on again in the evening, turn on location tracking and open zombies, run! at the same time, etc. also it is quicker for turning on/off wifi etc than using ncsettings because it doesn't require you to close the notification centre after use. however it does need several minutes set up before it can be used, unlike ncsettings which is almost ready for immediate use.
+* system preferences keyboard — modifier keys — caps lock key: no action
+* [seil][] free–mac setting — caps lock — change caps lock to 80 (F19)  — future options would be cmd_r or opt_r to F18 etc . NB remember to change caps lock configuration in system to "no action" as per [pqrs' notes][]
+* [karabiner][] free–mac goto tab misc&uninstall, select open private.xml, paste the following code (based on [brett][] and [pqrs][]); if you already have other modifications there, just paste the "items". The syntax appears to be: (1) key to modify (2) when held, send this (3) when tapped, send this.
 
-##ncsettings
-(free) if you don't want to set up profiles for your toggles with snprofiles, them ncsettings allows easy and visually attractive access to toggle switches, such as airplane mode and wifi. There are other useful toggles that I don't use as regularly, such as flash (especially useful if turning on the flash for long periods e.g.  emergency lighting— for shorter use i use the flashlight option within launch center pro), location services, screen rotation lock, and power, but these come in handy when needed, and using the NCSettings app for this takes much less time each time compared to the default settings app. note you'll need to enable the app in the notification center before you will see the settings appear.
+here's the code
 
-##useful helper programs
+	<?xml version="1.0"?>
+	<root>
+		<item>
+			<name>F19 to F19</name>
+			<appendix>(F19 hold to Hyper2 (ctrl+shift+cmd) + F19 Only, send F19)</appendix>
+			<identifier>private.f192f19_cmdshiftctrl</identifier>
+			<autogen>
+				--KeyOverlaidModifier--
+				KeyCode::F19,
+				KeyCode::COMMAND_L,
+				ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+				KeyCode::F19,
+			</autogen>
+		</item>
+		<item>
+			<name>Shift_L to Shift_L</name>
+			<appendix>(Shift_L hold to Shift_L + Shift_L Only, send F18)</appendix>
+			<identifier>private.shiftl2shiftl_f18</identifier>
+			<autogen>
+				--KeyOverlaidModifier--
+				KeyCode::SHIFT_L,
+				KeyCode::SHIFT_L,
+				KeyCode::F18,
+			</autogen>
+		</item>
+		<item>
+			<name>Tab to Tab</name>
+			<appendix>(Tab tap to Tab + Tab hold send Hyper (ctrl+shift+cmd+opt))</appendix>
+			<identifier>private.tab2tab_cmdoptshiftctrl</identifier>
+			<autogen>
+				--KeyOverlaidModifier--
+				KeyCode::TAB,
+				KeyCode::COMMAND_L,
+				ModifierFlag::SHIFT_L | 
+				ModifierFlag::OPTION_L | ModifierFlag::CONTROL_L,
+				KeyCode::TAB,
+			</autogen>
+		</item>
+	</root>
 
-###mobile terminal
-(free) i use this mainly in conjunction with inetutils (free) to ping on the network
+* go back to change key tab, select reload xml; the options above should now appear at the top of the menu
+* enable the options
+* you can use misc&uninstall launch eventviewer to see if your new options are working
+* restart the computer to finish enabling the keys (you'll want to be able to bring alfred up e.g. with cmd-space later)
+* set alfred to activate on F19, alfred features/clipboard/viewer hotkey to F18
+* can use same method to allocate "keytap only" to fn, leftshift, leftctrl, leftalt, leftcmd, rightcmd, rightalt or most other keys
 
-###nonewsisgoodnews, bolt, no page dots (chpwn), zeppelin
-(free) hides apple's otherwise–obligatory newsstand icon; hides battery icon unless charging; hides page dots on home screen; hides carrier name (or you can choose an icon)
+[seil]: https://pqrs.org/osx/karabiner/seil.html
+[karabiner]: https://pqrs.org/osx/karabiner
+[brett]: http://brettterpstra.com/2012/12/08/a-useful-caps-lock-key/
+[pqrs' notes]: https://pqrs.org/osx/karabiner/document.html.en
+[pqrs]: https://pqrs.org/osx/karabiner/document.html.en
 
-###fiveicondock, fiveiconswitcher, fivecolumnspringboard
-(free) if you are already hiding the text labels of the icons, thiese are very usable. Unfortunately fiveiconfolder does not work currently.
+## stop keyboard input
 
-###safarizwipez, tab+
-(free) close safari tabs by swiping up or down in the safari tab switcher; remove 8 tab limit on safari
+<div id="keyboardcleantool"></div>
 
-###recordmyscreen
-(free) make recordings of your iphone screen, helpful for showing processes and workflows, for example.
+##### keyboardcleantool
 
-### mxtube and youtubetomp3
-(free) get video or audio from youtube
+[keyboardcleantool][] free–mac temporarily disable the keyboard for when a cat wants to sit on your laptop or a baby wants to play with the keyboard
 
-### volume step
-(free) adjust volume by less than one full increment; especially useful if you listen at very low volume. I use 30% increments.
+[keyboardcleantool]: http://blog.boastr.net/?p=2452
+
+# miscellaneous
+
+[internal screen rotation][] hold down command and option keys while selecting display preferences in system preferences; note you'll have to close system prefs first. (made a keyboardmaestro macro for this; or if you use alfred, can make separate actions to activate [keyboardmaestro macros][screenrotate] for default, 90 or 270 degrees.)
+
+[internal screen rotation]: http://osxdaily.com/2010/12/28/rotate-mac-screen-orientation
+[screenrotate]: https://www.dropbox.com/s/pw9vyn1pdhryl41/20140604makiaeascreenrotation.kmmacros
+
+<div id="midisheetmusic"></div>
+[midisheetmusic][] free–mac download a midi file and play it with just the computer while displaying sheet music. if you want to play the midi through to the piano, then can download the free version of synthesia and it will do it for you.
+
+[midisheetmusic]: http://sourceforge.net/projects/midisheetmusic/
+
+<div id="aria"></div>
+<div id="musescore"></div>
+
+[aria maestosa](http://ariamaestosa.sourceforge.net) and [musescore](http://musescore.org) free–mac midi players and editors
+
+[print to pdf][] great way to use the keyboard to open/print to pdf; create keyboard shortcut for the submenu as follows: system preferences - keyboard - shortcuts - all applications - add
+
+	Save as PDF…
+	Open PDF in Preview
+
+assign these as cmd-s and cmd-o. When printing, i.e. cmd-p as usual, you now have shortcuts for the submenus, cmd-s and cmd-o. You may be able to do the same for other applications.
+
+[print to pdf]: http://macsparky.com/blog/2013/10/print-to-pdf-revisited
+
+
+<div id="parallels"></div>
+[parallels desktop][] £34.95mac [education price][parallels education store price] if you need to use a virtual machine, this is worth the investment
+
+[parallels desktop]: http://www.parallels.com/products/desktop/
+[parallels education store price]: http://store.apple.com/uk-edu/product/H9892ZM/B/parallels-desktop-8-for-mac-education-edition
+
+
+recommended safari extensions: 1password and adblock
+
+
+<div id="multimarkdowncomposer"></div>
+[multimarkdown composer][] £7.99mac text editor with excellent multimarkdown support — if sublime text is too complex, and your files are not the length of novels
+
+[multimarkdown composer]: http://multimarkdown.com
+
+ epub audio, with controls, looping, and autoplay, e.g.
+
+	<audio src="audio/20140117imagine-original-clip-songbook.mp3" controls="controls" loop="loop" autoplay="autoplay">piano only</audio>
+
+## creating
+
+ios speak text — turn on via settings.app — general — accessibility — speak selection ON — voices — e.g. chinese (Hong Kong Sar China) — enhanced quality (very good speech synthesis, use by highlighting text and selecting the speak option)
+
+In Finder, sort by reverse modified date, so most–recently modified files/folders appear at the top. Prepend files with creation date. I use a Keyboard Maestro "hyper2" shortcut to produce YYYYMMDD.
+
+## typing polytonic greek on mac
+unfortunately still not available in ios, but very usable on mac:
+
+system preferences - keyboard - input sources; add greek - polytonic
+
+system preferences - keyboard - shortcuts - input sources; select a key combination for changing the input source, e.g. hyper2–`
+
+type a combination of keys to specify accents for the letter, before you enter the accented letter:
+
+ |
+---: | :--- | :---
+smooth breather | ᾽ | ' 
+rough breather | ῾ | " 
+acute | ´ | ; 
+diaresis | ¨ | :
+circumflex | ῀ | \[ 
+iota subscript | ι | {
+grave | ` | ]
+grave (also) | ` | }
+circumflex with smooth breather | ῏ | - 
+circumflex with rough breather | ῟ | _
+acute with smooth breather | ῎ | /
+acute with rough breather | ῞ | ?
+
+you can get by with the single combining accents until you are comfortable with them, and then add the other keys as you gain speed. There are several other keys you can use, for grave with smooth or rough breather, diaresis with acute etc. ( ῍ ), ( ῝ ), ( ΅ )
+
+Keyboardmaestro is very helpful in that it can keep the "locations" of its own shortcut keys the same across different input keyboards — for example when I use my normal em–space key combination, it is typed using the same physical keys on the keyboard and I don't have to shift gears to use the other alphabet for those shortcuts (I still have to shift for system–integrated i.e. non–keyboardmaestro shortcuts such as copy and paste).
+
+for rarer accents such as ῑ, ῡ, ᾱ, ῒ, ΐ, ῐ, ᾰ, I use keyboardmaestro macros to insert the characters; for even rarer accents such as ᾱ́, ῑ́, ῡ́, ᾰ́, ῐ́, I also use keyboardmaestro macros but need additionally to use the unicode combining acute ( ́ ) NB you can copy and paste that combining acute into your own macros to use it, or search for "combining acute" in the character viewer and copy from there.
+
+keyboardmaestro is also very helpful for creating emacs–style bindings for often–used keys combinations that would be awkward to type in sublime text when the keyboard input method is set to greek polytonic, e.g. I set hyper2–l (dvorak equivalent ctrl–n) to do "move cursor down to next line, after inserting a full stop", hyper2–d (dvorak equivalent ctrl–e) to do "move cursor to end of line".

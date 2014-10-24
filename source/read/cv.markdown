@@ -7,44 +7,46 @@ sharing: true
 footer: true
 ---
 * <a href="#skills">skills</a>
-* <a href="#formalqualifications">formal qualifications</a>
-* <a href="#publicationsshowsawards">publications, shows, awards</a>
-* <a href="#formalroles">formal roles</a>
+* <a href="#qualifications">qualifications</a>
+* <a href="#booksshowsawards">books, shows, awards</a>
+* <a href="#roles">roles</a>
 
 <div id="skills"></div>
 
-#skills
+##skills
 
  |
 ----: | :----
 **research**|ecology; sustainable engineering, architecture, farming; anthropology, philosophy, strategy
-**media**|css, html, epub, desktop publishing, multimarkdown, markdown, wikis, midi, recording
-**sysadmin**|macos, windows, linux, ios, cisco, google apps, virtualisation
+**media**|css, html, epub, publishing, multimarkdown, markdown, midi, recording
+**computing**|macos, windows, linux, ios, cisco, google apps, virtualisation also see [makiaea techrecommendations][]
 **languages**|**fluent** English; **advanced** Cantonese Chinese; **intermediate** Mandarin Chinese, German, French, Japanese, Italian; **basic** Spanish, Finnish, classical Greek; **singing, typing and publishing** in each language
 **musical**|singing; composing for piano, voice; pianoforte (cantabile); caixa, rocar
 **craft**|writing; Japanese bookbinding; natural–fibre knotcraft; pencil/ink and improv sketching; bamboo/wood carving
 **athletic**|mountain–hiking/biking, fell–running; yoga, massage, skating (inline, ice), fencing (foil); dance (contemporary, tango, improv)
 
-<div id="formalqualifications"></div>
+[makiaea techrecommendations]: http://makiaea.org/read/techrecommendations.html
 
-#formal qualifications
+<div id="qualifications"></div>
+
+##qualifications
 
  |
 ----: | :----
-2011–13|**DSW** Disaster Service Worker CERT/San Diego Fire–Rescue Department
+2011–13|**DSW** Disaster Service Worker CERT/San Diego Fire–Rescue Department/FEMA USA
 2003–04|**ITEC Level 3 Diploma** Holistic Massage with Anatomy and Physiology, Jade College UK
 1996–00|**MA. MEng** University of Cambridge. MEng project *Design of a demountable bamboo space frame*
 1995–96|**Diploma** People’s University, Beijing, Mandarin Centre 
 <span style="white-space:nowrap;">1988–95</span>|**A–Level** Mathematics, Physics, Chemistry; **AO–Level**, **GCSE**; Haberdashers’ Aske’s Boys’ School, Hertfordshire
 
-<div id="publicationsshowsawards"></div>
+<div id="booksshowsawards"></div>
 
-#publications, shows, awards
+##books, shows, awards
 
  |
 ----: | :----
-2013|(forthcoming) **Author** *The book, the mirror, and the sword*
-2010|**Publisher** Michael Prichard’s *Waterhouse and his Gate* first edition 978–1–84874–015–0
+(forthcoming)|**Author** *The book, the mirror, and the sword*
+2014|**Editor** John Burnet's *Greek rudiments* second edition
 2010|**Editor** John Burnet’s *Greek philosophy: from Thales to Plato* second edition 978–1–84874–008–2; *Early Greek philosophy* fifth edition 978–1–84874–004–4
 2008|**Author** *Love and trust and somesuch spells; the rising power of responsible people* 978–1–84874–000–6
 2003|**Singer, Actor** Tessa Ditner’s *Beyond a Fairytale*
@@ -52,13 +54,13 @@ footer: true
 2002|**Lead Dancer** Tessa Ditner’s *A Day, a Life*
 1999|**Cambridge University Engineering Department** first prize: architecture, third–year design project
 1997|**Cambridge University International Model United Nations** best delegation
-<span style="white-space:nowrap;">1996–98</span>|**Bass Singer** CUMS Chorus (including performance at the Royal Albert Hall)
+<span style="white-space:nowrap;">1996–98</span>|**Bass Singer** Cambridge University Music Society Chorus (including performance at the Royal Albert Hall)
 1995|**Lead Singer** Alexander Bermange’s *Nessie*
 1994|**London Youth Games** gold medal in fencing, three–person team
 
-<div id="formalroles" style="page-break-before:always"></div>
+<div id="roles" style="page-break-before:always"></div>
 
-#formal roles
+##roles
 
  |
 ----: | :----

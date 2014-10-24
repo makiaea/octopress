@@ -1,91 +1,103 @@
 ---
 layout: page
-title: "we may not have forever, but i'll love you all the same"
+title:
 date: 2012-08-23 19:47
 comments: true
 sharing: true
 footer: false
 ---
+## we may not have forever…
 
-##read
+<div id="forever"></div>
 
-**[techrecommendations][]** some favourite apps and workflows for macosx and ios 2013
+[que sera sera][], [the moon shines my love][] (月亮代表我的心), [to meet perchance][] (仰げば尊し), [imagine][], [puff the magic dragon][], [we are the world][], [winds who lift our wings][] and many more [songs][]. [songs and source files][song source files] released under creative commons [BY-NC-SA] license
 
-[techrecommendations]: http://makiaea.org/read/techrecommendations.html
+[imagine]: https://soundcloud.com/makiaea/imagine-john-lennon-cover-makiaea-vocal-and-piano
+[puff the magic dragon]: https://soundcloud.com/makiaea/puff-the-magic-dragon
+[to meet perchance]: https://soundcloud.com/makiaea/to-meet-perchance-vocal-and-piano
+[the moon shines my love]: https://soundcloud.com/makiaea/the-moon-shines-my-love-teresa-teng-cover-vocal-and-piano
+[que sera sera]: https://soundcloud.com/makiaea/que-sera-sera-doris-day-cover-makiaea-vocal-solo
+[we are the world]: https://soundcloud.com/makiaea/we-are-the-world-michael-jackson-usa-for-africa-cover-vocal
+[winds who lift our wings]: https://soundcloud.com/makiaea/winds-who-lift-our-wings-bette-midler-cover-wind-beneath-my-wings-vocal
+[song source files]: https://drive.google.com/folderview?id=0B-f1yUq6EItHV0YwWU5YNmY4Znc&usp=sharing
+[BY-NC-SA]: http://creativecommons.org/licenses/by-nc-sa/4.0/
 
-**[love and trust and somesuch spells][somesuch]** *for empaths* an original, thought–provoking and inclusive book about living responsibly. practical and sensible methods to deal with challenging situations. isbn 978-1-84874-000-6 latest [epub][somesuchepub] 2010
+[songbook][makiaeasongbook] including song lyrics rewritten or translated by maki. epub 2014; also [songbook full][makiaeasongbook2]
+
+[songs]: https://soundcloud.com/makiaea
+[makiaeasongbook]: https://www.dropbox.com/s/hd1tds3pt4dzuow/20131119songbook.epub
+[makiaeasongbook2]: https://www.dropbox.com/s/1nddqb5r0ovgc8o/20131119songbook-2.epub
+[makiaeasongbookaudio]: https://www.dropbox.com/s/el5crshnmh0tww7/20131119songbook-2-audio.epub
+
+[love and trust and somesuch spells][somesuch] *for empaths* an original, thought–provoking and inclusive book about living responsibly. practical and sensible methods to deal with challenging situations. isbn978-1-84874-000-6 [epub][somesuchepub] 2010
 
 [somesuch]: http://makiaea.org/read/somesuch.html
 [somesuchepub]: http://dl.getdropbox.com/u/2891399/press/somesuch/20120112makiaeasomesuch.epub
 
-**booknotes** on recently read books. latest [epub][makiaeabooknotes] 2012
-
-[makiaeabooknotes]: http://dl.dropbox.com/u/2891399/org/booknotes/makiaeabooknotes.epub
-[flowersforbooknotes]: http://dl.getdropbox.com/u/2891399/org/picturebook/20120420flowersforbooknotes.jpg
-
-**songbook** including song lyrics rewritten or translated by maki. latest [epub][makiaeasongbook] 2012 
-
-[makiaeasongbook]: http://dl.dropbox.com/u/2891399/org/songbook/makiaeasongbook.epub
-[makiaeasongbook01]: http://dl.dropbox.com/u/2891399/org/songbook/makiaeasongbook01.epub
-[makiaeasongbook02]: http://dl.dropbox.com/u/2891399/org/songbook/makiaeasongbook02.epub
-
-**cookbook** mostly vegetarian recipes. latest [epub][cookbook] 2012
-
-[cookbook]: http://dl.dropbox.com/u/2891399/org/cookbook/jennyandmakicookbook.epub
-
-**[early greek philosophy][]** (editor) by burnet, john 1863–1928 fifth edition 2010 isbn 978-1-84874-004-4 latest [epub][earlygreekphilosophy] 2010
+[early greek philosophy][] (editor) by burnet, john 1863–1928 fifth edition 2010 isbn978-1-84874-004-4 [epub][earlygreekphilosophy] 2010
 
 [early greek philosophy]: http://makiaea.org/read/earlygreekphilosophy.html
 [earlygreekphilosophy]: http://dl.dropbox.com/u/2891399/press/burnet/earlygreekphilosophy/earlygreekphilosophy.epub
 
-**[greek philosophy][]**: thales to plato (editor) by burnet, john 1863–1928 second edition 2010 isbn 978-1-84874-008-2 latest [epub][greekphilosophy] 2010
+[greek philosophy: thales to plato][greek philosophy] (editor) by burnet, john 1863–1928 second edition 2010 isbn978-1-84874-008-2 [epub][greekphilosophy] 2010
 
 [greek philosophy]: http://makiaea.org/read/greekphilosophy.html
 [greekphilosophy]: http://dl.dropbox.com/u/2891399/press/burnet/greekphilosophy/greekphilosophy.epub
 
-##make
+[greek rudiments][greekrudiments] (editor) by burnet, john 1863–1928 second edition 2014 [epub][greekrudiments]
 
-**[makiaeakanjicantonese anki deck][]** kanji and cantonese learning flashcards for use with [anki][] based on JLPT level 1 (2135 kanji). cantonese definitions manually entered, originally from [cantodict][]. can be used in conjunction with [makiaeafont ttf][]. also available as a [packaged anki deck][]
+[greek rudiments]: http://makiaea.org/read/greekrudiments.html
+[greekrudiments]: https://www.dropbox.com/s/6olikluhjoa26j1/20140405greekrudiments.epub
 
-[makiaeakanjicantonese anki deck]: https://www.dropbox.com/s/bulrv9hs5todkwa/20120905makiaeakanjicantonese.anki
-[packaged anki deck]: https://www.dropbox.com/s/3jndfzcsv9t2467/20120905makiaeakanjicantonese-shared-1346782570.zip
-[anki]: http://ankisrs.net
-[cantodict]: http://www.cantonese.sheik.co.uk/dictionary
+a basic map about maki: [pdf][map-pdf], [ithoughts][map-ithoughts]
 
-**[makiaeafont ttf][]** a basic font using fontforge — originally for ambidextrous pen–and–ink 1995; released under [creative commons by-nc-sa licence 3.0][cc]. contains A–Z, a–z, 0–9 and some punctuation. auto–generated accents available, not optimised. designed to work without kerning pairs or ligatures.
+[map-ithoughts]: https://www.dropbox.com/s/1gwnlobxjbti9gt/20131210maki.itmz
+[map-pdf]: https://www.dropbox.com/s/qek299tj89lh07y/20131210maki.pdf
+[map-markdown]: https://www.dropbox.com/s/6yr7chr9q0l2xiw/20131210maki.markdown
+[map-opml]: https://www.dropbox.com/s/8lxjeoenjaka1ur/20131210maki.opml
 
-[makiaeafont ttf]: http://dl.dropbox.com/u/2891399/Anki/makiaeakanjicantonese.media/makiaea2.ttf
-[cc]: http://creativecommons.org/licenses/by-nc-sa/3.0/
+<div id="love"></div>
 
-**[harmony with offline cache][hoci]** a fun, ephemeral drawing tool created by [mrdoob][]. modified to work offline without internet connection using html5 offline caching, and a few other tweaks. code available on [github][hoci code] under MIT licence.
+## … but i'll love you all the same
+
+[harmony with offline cache][hoci] a fun, ephemeral drawing tool created by [mrdoob][]. modified to work offline without internet connection using html5 offline caching, and a few other tweaks. code available on [github][hoci code] under MIT licence.
 
 [hoci]: http://makiaea.org/make/hoci.html
 [mrdoob]: http://mrdoob.com/projects/harmony/
 [hoci code]: https://github.com/makiaea/harmony
 
-##sing
+[makiaeafont ttf][] a basic font using fontforge — originally for ambidextrous pen–and–ink 1995; released under [creative commons by-nc-sa licence 3.0][cc]. contains A–Z, a–z, 0–9 and some punctuation. auto–generated accents available. designed to work without kerning pairs or ligatures.
 
-**lyrics** in the [songbook][]; all songs released under [creative commons by-nc-sa licence 3.0][cc]
+[makiaeafont ttf]: http://dl.dropbox.com/u/2891399/Anki/makiaeakanjicantonese.media/makiaea2.ttf
+[cc]: http://creativecommons.org/licenses/by-nc-sa/3.0/
 
-[songbook]: http://dl.dropbox.com/u/2891399/org/songbook/makiaeasongbook.epub
-[cc]: http://dl.dropbox.com/u/2891399/org/songbook/ponyo.mp3
+[techrecommendations][] and [appsforchildren][] useful apps and workflows for mac and ios 2014
 
-**harp of mime** a sad piece from *saint seiya* arranged for piano. rewritten by maki; analog piano recording; *mp3* analog mono piano [20100612][]; *pdf* of sheet music created via lilypond [20061205][]; *lilypond source* file for sheet music [200601205][]; *midi* example file via lilypond (machine-played) [2010410][] 
+[techrecommendations]: http://makiaea.org/read/techrecommendations.html
+[appsforchildren]: https://www.dropbox.com/s/27n49k6mg5q2iyo/20140929appsforchildren.pdf
 
-[20100612]: http://dl.dropbox.com/u/2891399/org/songbook/20100612saintseiya-mime-analogpiano.mp3
-[200601205]: http://dl.dropbox.com/u/2891399/org/songbook/saintseiya-mime.ly
-[2010410]: http://dl.dropbox.com/u/2891399/org/songbook/saintseiya-mime.midi
-[20061205]: http://dl.dropbox.com/u/2891399/org/songbook/saintseiya-mime.pdf
+[florence nightingale's rose][] graphs, in d3.js. data from p15, florence nightingale 1859 *A contribution to the sanitary history of the British army during the late war with Russia* ([digitised data][], [digitised graph][]) based on d3.js code by [kgryte][], inspired by [mbostock][]'s protovis code
 
-**崖の上のポニョ ponyo** lullaby vocal *mp3* [20100402][] 
+[florence nightingale's rose]: http://makiaea.org/make/nightingales-rose/
+[digitised data]: http://pds.lib.harvard.edu/pds/view/7420433?n=21&imagesize=2400&jp2Res=0.25&printThumbnails=no
+[digitised graph]: http://pds.lib.harvard.edu/pds/view/7420433?n=25&imagesize=2400&jp2Res=0.25&printThumbnails=no
+[kgryte]: https://github.com/kgryte/gists/tree/master/d3/nightingales-rose
+[mbostock]: http://mbostock.github.io/protovis/ex/crimea-rose.html
 
-[20100402]: http://dl.dropbox.com/u/2891399/org/songbook/ponyo.mp3
+[booknotes][makiaeabooknotes] on recently read books. epub 2012
 
-**imagine** lullaby vocal, rewritten lyrics *mp3* [20100403][] 
+[makiaeabooknotes]: https://www.dropbox.com/s/eoy73gr11507z0s/20140321booknotes.epub
 
-[20100403]: http://dl.dropbox.com/u/2891399/org/songbook/imagine.mp3
+[cookbook][makiaeacookbook] vegetarian/lacto–pesca, also [cookbook2][makiaeacookbook2] non–vegetarian
 
-**puff the magic dragon** lullaby vocal, rewritten lyrics *mp3* vocal only [20100503][]; *mp3* vocal and piano [20110501][] 
+[makiaeacookbook]: https://www.dropbox.com/s/6f9446dkwdts45p/20140321cookbook.epub
+[makiaeacookbook2]: https://www.dropbox.com/s/a903vkrek3zbia8/20140321cookbook-2.epub
 
-[20100503]: http://dl.dropbox.com/u/2891399/org/songbook/puffthemagicdragon.mp3
-[20110501]: http://dl.dropbox.com/u/2891399/org/songbook/20110429puffvocalandpiano3.mp3
+[numbersystem][makiaeanumbersystem] (anki package) uses fictional characters to memorise combinations of two–digit decimal numbers (character, action, character, action etc.)
+
+[makiaeanumbersystem]: https://www.dropbox.com/s/cw7wj64hnubl0e4/20141021makiaeanumbersystem.apkg?dl=0
+
+<a style="color:white" href='https://alpha.app.net/maki' rel='me'></a>
+
+
+

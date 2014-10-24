@@ -15,6 +15,7 @@ body{
 	}
 	@media screen and (max-width: 600px){
 		font-size: 13px;
+		margin: 0 4px;
 	}
 }
 /* 20130828 begin table modifications*/
@@ -22,15 +23,21 @@ th {display:none;}
 td {padding:0em 0.3em 0em 0.3em;vertical-align: top;background-color:#ffffff;}
 table {border:0!important}
 
+/*20130926 begin nav modifications*/
+nav#main-nav, nav#mobile-nav, form.search {display:none}
 h1{
-	font-size: 1.8em;
+	font-size: 1.4em; padding:0px;
 }
 h2{
-	font-size: 1.5em;
+	font-size: 1.3em; position: -webkit-sticky !important; top: 0px; background-color: white; padding: 0px;
 }
 h3{
-	font-size: 1.3em;
+	font-size: 1.2em;
 }
+h5{
+	font-size: 1.2em; font-weight: normal; position: -webkit-sticky !important; top: 0px; background-color: white; padding: 0px;
+}
+
 a{
 	text-decoration: none;
 	outline-width: 0;
