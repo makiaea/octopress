@@ -8,8 +8,9 @@ footer: true
 
 ---
 
-map of topics: [pdf][map-pdf],[ithoughts][map-ithoughts],[markdown][map-markdown]
+map of topics: [html][map-html], [pdf][map-pdf],[ithoughts][map-ithoughts],[markdown][map-markdown]
 
+[map-html]: http://makiaea.org/read/20140526techrecommendations/20140526techrecommendations.html
 [map-ithoughts]: https://www.dropbox.com/s/7ndlfwv4y4280h4/20140526techrecommendations.itmz
 [map-pdf]: https://www.dropbox.com/s/sseg1lvb64ghrax/20140526techrecommendations.pdf
 [map-markdown]: https://www.dropbox.com/s/i3c5p9x3bd0hgtf/20140526techrecommendations.markdown
